@@ -31,3 +31,22 @@ footer{position:relative;left:auto;bottom:auto;padding:0 32px 20px}
 body:has(.opening-content):not(:has(footer)) main{min-height:100svh}
 
 .index-trigger,.method-step{min-height:44px;min-width:44px}.project-list a{display:inline-flex;align-items:center;min-height:44px}.branch-panel{scroll-margin-top:24px}@media(max-width:420px){.mission-panel{padding:22px}.branch-panel{padding:24px 18px}.index-choices{gap:12px}.method-steps{gap:5px}}
+
+/* Directional neural signal: selected branch leads into the revealed content. */
+.research-index{position:relative}
+.index-signal{position:absolute;top:44px;width:160px;height:36px;transform:translateX(-50%);pointer-events:none}
+.index-signal svg{width:100%;height:100%;overflow:visible;fill:none;stroke-linecap:round}
+.signal-fiber{stroke:rgba(83,105,116,.25);stroke-width:1}
+.signal-pulse{stroke:#4f859d;stroke-width:2;stroke-dasharray:12 88;animation:index-conduct 1.4s ease-in-out 3}
+.index-below{position:fixed;z-index:8;bottom:max(20px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);min-height:44px;padding:10px 20px;border:1px solid #82969e45;border-radius:28px;background:#fafbf9ed;color:#3e6574;box-shadow:0 3px 22px #52697312;font-size:12px;white-space:nowrap;cursor:pointer;backdrop-filter:blur(12px)}
+.index-signal[hidden],.index-below[hidden]{display:none}
+@keyframes index-conduct{from{stroke-dashoffset:12;opacity:0}20%{opacity:1}85%{opacity:1}to{stroke-dashoffset:-100;opacity:0}}
+@media(prefers-reduced-motion:reduce){.signal-pulse{animation:none;stroke-dasharray:none;opacity:.5}}
+/* Stronger navigation excitation, retaining the pale field. */
+.signal-fiber{stroke:rgba(65,111,130,.48);stroke-width:1.5}
+.signal-pulse{stroke:#31708c;stroke-width:3;filter:drop-shadow(0 0 4px #72a6b8);stroke-dasharray:24 76}
+.index-trigger[aria-expanded=true]{color:#245b70;font-weight:600}
+.index-below{border-color:#53879b80;color:#245b70;font-size:14px;font-weight:600;box-shadow:0 0 24px #72a6b833}
+@media(prefers-reduced-motion:reduce){.signal-pulse{filter:none}}
+.signal-spread{animation-delay:.45s;stroke-width:2;opacity:0}
+@media(prefers-reduced-motion:reduce){.signal-spread{opacity:.5}}

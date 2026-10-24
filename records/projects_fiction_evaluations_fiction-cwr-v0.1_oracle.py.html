@@ -1,0 +1,78 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Independent search oracle · Python — Hermes Labs</title><link rel="stylesheet" href="../project-pages.css"><script src="../freshness-status.js" defer></script><script src="../network-topology.js" defer></script><script src="../neural-field.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a><canvas id="world" aria-hidden="true"></canvas><div class="reading-wash" aria-hidden="true"></div><header class="project-header"><a class="lab-name" href="../reference.html">Hermes Labs</a><a href="../reference.html#projectsPanel">← All projects</a></header><main id="content"><div class="record-heading"><p class="eyebrow">Research library / Source record</p><h1>Independent search oracle · Python</h1><p class="fine-print">Exported: 2026-10-24 (UTC). Source date: Not recorded in a recognized date field. Historical statements retain their original scope and dates; current project summaries may supersede them.</p><p class="record-summary">&quot;&quot;&quot;Independent finite search/replay transitions; shared schema validation only.</p><a href="../fiction.html">← Project page</a> · <a href="files/projects_fiction_evaluations_fiction-cwr-v0.1_oracle.py" download>Download original file</a><details class="provenance"><summary>Source and integrity</summary><p>projects/fiction/evaluations/fiction-cwr-v0.1/oracle.py</p><p>SHA-256: 6ab91e953e48a69bd73af62f5b7337cee1c9608ce6420a52ae3c0db6da5a2b15</p></details></div><article class="reading-panel source-document"><pre><code>&quot;&quot;&quot;Independent finite search/replay transitions; shared schema validation only.
+
+Never calls the grader or its invariant function. A node-limit stop is
+inconclusive; exhaustion concerns the declared finite action/cost budgets.
+&quot;&quot;&quot;
+from collections import deque
+from harness import InputError, validate_world
+
+
+def _advance(world, state, cost, primitive):
+    positions = {e: i for i, e in enumerate(world[&quot;entities&quot;])}
+    if primitive not in world[&quot;actions&quot;]:
+        return None
+    op = world[&quot;actions&quot;][primitive]
+    if cost + op[&quot;cost&quot;] &gt; world[&quot;budget&quot;][&quot;max_cost&quot;]:
+        return None
+    for requirement in (&quot;consume&quot;, &quot;require&quot;):
+        for entity, quantity in op[requirement].items():
+            if state[positions[entity]] &lt; quantity:
+                return None
+    successor = list(state)
+    for entity, quantity in op[&quot;consume&quot;].items():
+        successor[positions[entity]] -= quantity
+    for entity, quantity in op[&quot;produce&quot;].items():
+        successor[positions[entity]] += quantity
+    c = world[&quot;constraints&quot;]
+    if min(successor) &lt; 0 or sum(successor) &gt; c[&quot;inventory_cap&quot;]:
+        return None
+    for entity, quantity in c[&quot;minimum&quot;].items():
+        if successor[positions[entity]] &lt; quantity:
+            return None
+    for entity, quantity in c[&quot;maximum&quot;].items():
+        if successor[positions[entity]] &gt; quantity:
+            return None
+    return tuple(successor), cost + op[&quot;cost&quot;]
+
+
+def accepts(world, plan):
+    validate_world(world)
+    if len(plan) &gt; world[&quot;budget&quot;][&quot;max_actions&quot;]:
+        return False
+    state = tuple(world[&quot;initial&quot;][e] for e in world[&quot;entities&quot;])
+    cost = 0
+    for primitive in plan:
+        next_step = _advance(world, state, cost, primitive)
+        if next_step is None:
+            return False
+        state, cost = next_step
+    return state == tuple(world[&quot;goal&quot;][e] for e in world[&quot;entities&quot;])
+
+
+def solve(world, max_nodes=100000):
+    validate_world(world)
+    if type(max_nodes) is not int or max_nodes &lt; 1:
+        raise InputError(&quot;max_nodes must be a positive integer&quot;)
+    initial = tuple(world[&quot;initial&quot;][e] for e in world[&quot;entities&quot;])
+    goal = tuple(world[&quot;goal&quot;][e] for e in world[&quot;entities&quot;])
+    queue = deque([(initial, 0, ())])
+    seen = {(initial, 0)}
+    expanded = 0
+    while queue:
+        if expanded &gt;= max_nodes:
+            return {&quot;status&quot;: &quot;search_limit&quot;, &quot;expanded&quot;: expanded, &quot;actions&quot;: None}
+        state, cost, plan = queue.popleft()
+        expanded += 1
+        if state == goal:
+            return {&quot;status&quot;: &quot;solved&quot;, &quot;expanded&quot;: expanded,
+                    &quot;actions&quot;: list(plan), &quot;cost&quot;: cost}
+        if len(plan) &gt;= world[&quot;budget&quot;][&quot;max_actions&quot;]:
+            continue
+        for primitive in world[&quot;actions&quot;]:
+            next_step = _advance(world, state, cost, primitive)
+            if next_step is not None and next_step not in seen:
+                seen.add(next_step)
+                successor, next_cost = next_step
+                queue.append((successor, next_cost, plan + (primitive,)))
+    return {&quot;status&quot;: &quot;exhausted&quot;, &quot;expanded&quot;: expanded, &quot;actions&quot;: None}
+</code></pre></article></main><footer>Hermes Labs · Working research record · Snapshot 2026-10-24<br>Background imagery is a visual metaphor. Local preview; not published.</footer></body></html>

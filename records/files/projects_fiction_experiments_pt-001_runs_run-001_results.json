@@ -1,0 +1,3228 @@
+{
+  "classification": "constructed-strategy and bounded exhaustive software diagnostic",
+  "human_runs": 0,
+  "model_runs": 0,
+  "paid_calls": 0,
+  "worlds": {
+    "W1": {
+      "audit": {
+        "grammar_sequences": 1093,
+        "valid_sequences": 1051,
+        "invalid_sequences": 42,
+        "distinct_outcomes": 72,
+        "full_state_metric_agreement": true,
+        "multiplicity_agreement": true
+      },
+      "proxy_max": 16,
+      "proxy_optimal_outcomes": 1,
+      "value_range_at_proxy_optimum": [
+        12,
+        12
+      ],
+      "value_max": 20,
+      "primary_conflict_gap": 8,
+      "candidate_label": true,
+      "verified_primary_conflict": true,
+      "label_matches": true,
+      "optimal_value_density": 0.013888888888888888,
+      "optima": {
+        "primary": {
+          "score": [
+            20
+          ],
+          "allocations": [
+            [
+              0,
+              2,
+              4
+            ]
+          ],
+          "count": 1
+        },
+        "fairness": {
+          "score": [
+            3,
+            14
+          ],
+          "allocations": [
+            [
+              3,
+              2,
+              1
+            ]
+          ],
+          "count": 1
+        },
+        "coverage": {
+          "score": [
+            3,
+            18
+          ],
+          "allocations": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "count": 1
+        },
+        "units": {
+          "score": [
+            6,
+            20
+          ],
+          "allocations": [
+            [
+              0,
+              2,
+              4
+            ]
+          ],
+          "count": 1
+        }
+      },
+      "alternative_value_sensitivity": {
+        "fairness": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": true
+        },
+        "coverage": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": true
+        },
+        "units": {
+          "same_optimal_set_as_primary": true,
+          "overlap_with_primary": 1,
+          "proxy_conflict": true
+        }
+      },
+      "frontier": [
+        {
+          "allocation": [
+            0,
+            2,
+            4
+          ],
+          "credits_left": 0,
+          "benefits": [
+            0,
+            8,
+            12
+          ],
+          "metrics": {
+            "proxy": 8,
+            "value": 20,
+            "minimum_benefit": 0,
+            "coverage": 2,
+            "units": 6
+          },
+          "sequence_count": 15
+        },
+        {
+          "allocation": [
+            1,
+            2,
+            3
+          ],
+          "credits_left": 0,
+          "benefits": [
+            1,
+            8,
+            9
+          ],
+          "metrics": {
+            "proxy": 10,
+            "value": 18,
+            "minimum_benefit": 1,
+            "coverage": 3,
+            "units": 6
+          },
+          "sequence_count": 60
+        },
+        {
+          "allocation": [
+            2,
+            2,
+            2
+          ],
+          "credits_left": 0,
+          "benefits": [
+            2,
+            8,
+            6
+          ],
+          "metrics": {
+            "proxy": 12,
+            "value": 16,
+            "minimum_benefit": 2,
+            "coverage": 3,
+            "units": 6
+          },
+          "sequence_count": 90
+        },
+        {
+          "allocation": [
+            3,
+            2,
+            1
+          ],
+          "credits_left": 0,
+          "benefits": [
+            3,
+            8,
+            3
+          ],
+          "metrics": {
+            "proxy": 14,
+            "value": 14,
+            "minimum_benefit": 3,
+            "coverage": 3,
+            "units": 6
+          },
+          "sequence_count": 60
+        },
+        {
+          "allocation": [
+            4,
+            1,
+            1
+          ],
+          "credits_left": 0,
+          "benefits": [
+            4,
+            4,
+            3
+          ],
+          "metrics": {
+            "proxy": 15,
+            "value": 11,
+            "minimum_benefit": 3,
+            "coverage": 3,
+            "units": 6
+          },
+          "sequence_count": 30
+        },
+        {
+          "allocation": [
+            4,
+            2,
+            0
+          ],
+          "credits_left": 0,
+          "benefits": [
+            4,
+            8,
+            0
+          ],
+          "metrics": {
+            "proxy": 16,
+            "value": 12,
+            "minimum_benefit": 0,
+            "coverage": 2,
+            "units": 6
+          },
+          "sequence_count": 15
+        }
+      ],
+      "contrasts": [
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 4,
+          "values": {
+            "P": 9,
+            "V": 9,
+            "R": 16,
+            "S": 20,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 7,
+          "R_minus_S": -4,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 8,
+          "values": {
+            "P": 12,
+            "V": 12,
+            "R": 18,
+            "S": 20,
+            "S_R_ORDER": 18
+          },
+          "R_minus_V": 6,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 16,
+          "values": {
+            "P": 20,
+            "V": 20,
+            "R": 18,
+            "S": 20,
+            "S_R_ORDER": 18
+          },
+          "R_minus_V": -2,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 72,
+          "values": {
+            "P": 12,
+            "V": 20,
+            "R": 20,
+            "S": 20,
+            "S_R_ORDER": 20
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 4,
+          "values": {
+            "P": 9,
+            "V": 9,
+            "R": 16,
+            "S": 20,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 7,
+          "R_minus_S": -4,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 8,
+          "values": {
+            "P": 10,
+            "V": 11,
+            "R": 16,
+            "S": 20,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -4,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 16,
+          "values": {
+            "P": 16,
+            "V": 16,
+            "R": 18,
+            "S": 20,
+            "S_R_ORDER": 18
+          },
+          "R_minus_V": 2,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 72,
+          "values": {
+            "P": 12,
+            "V": 20,
+            "R": 20,
+            "S": 20,
+            "S_R_ORDER": 20
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 4,
+          "values": {
+            "P": 9,
+            "V": 9,
+            "R": 16,
+            "S": 17,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 7,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 8,
+          "values": {
+            "P": 7,
+            "V": 12,
+            "R": 17,
+            "S": 20,
+            "S_R_ORDER": 17
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -3,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 16,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 18,
+            "S": 20,
+            "S_R_ORDER": 18
+          },
+          "R_minus_V": 4,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 72,
+          "values": {
+            "P": 12,
+            "V": 20,
+            "R": 20,
+            "S": 20,
+            "S_R_ORDER": 20
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 4,
+          "values": {
+            "P": 3,
+            "V": 3,
+            "R": 16,
+            "S": 14,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 13,
+          "R_minus_S": 2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 17
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 8,
+          "values": {
+            "P": 4,
+            "V": 5,
+            "R": 16,
+            "S": 17,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 11,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 16,
+          "values": {
+            "P": 10,
+            "V": 10,
+            "R": 18,
+            "S": 20,
+            "S_R_ORDER": 18
+          },
+          "R_minus_V": 8,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 72,
+          "values": {
+            "P": 12,
+            "V": 20,
+            "R": 20,
+            "S": 20,
+            "S_R_ORDER": 20
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 4,
+          "values": {
+            "P": 9,
+            "V": 9,
+            "R": 16,
+            "S": 14,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 7,
+          "R_minus_S": 2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 8,
+          "values": {
+            "P": 10,
+            "V": 10,
+            "R": 16,
+            "S": 16,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 6,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 18
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 16,
+          "values": {
+            "P": 12,
+            "V": 12,
+            "R": 16,
+            "S": 18,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 4,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 72,
+          "values": {
+            "P": 12,
+            "V": 20,
+            "R": 20,
+            "S": 20,
+            "S_R_ORDER": 20
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 4,
+          "values": {
+            "P": 3,
+            "V": 3,
+            "R": 16,
+            "S": 12,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 13,
+          "R_minus_S": 4,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 8,
+          "values": {
+            "P": 4,
+            "V": 6,
+            "R": 16,
+            "S": 14,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 10,
+          "R_minus_S": 2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 18
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 16,
+          "values": {
+            "P": 12,
+            "V": 12,
+            "R": 16,
+            "S": 18,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 4,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 72,
+          "values": {
+            "P": 12,
+            "V": 20,
+            "R": 20,
+            "S": 20,
+            "S_R_ORDER": 20
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 20
+        }
+      ],
+      "strategy_rows": 120
+    },
+    "W2": {
+      "audit": {
+        "grammar_sequences": 1093,
+        "valid_sequences": 272,
+        "invalid_sequences": 821,
+        "distinct_outcomes": 44,
+        "full_state_metric_agreement": true,
+        "multiplicity_agreement": true
+      },
+      "proxy_max": 14,
+      "proxy_optimal_outcomes": 2,
+      "value_range_at_proxy_optimum": [
+        5,
+        10
+      ],
+      "value_max": 12,
+      "primary_conflict_gap": 2,
+      "candidate_label": true,
+      "verified_primary_conflict": true,
+      "label_matches": true,
+      "optimal_value_density": 0.022727272727272728,
+      "optima": {
+        "primary": {
+          "score": [
+            12
+          ],
+          "allocations": [
+            [
+              0,
+              2,
+              2
+            ]
+          ],
+          "count": 1
+        },
+        "fairness": {
+          "score": [
+            1,
+            9
+          ],
+          "allocations": [
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ],
+          "count": 2
+        },
+        "coverage": {
+          "score": [
+            3,
+            9
+          ],
+          "allocations": [
+            [
+              1,
+              1,
+              3
+            ],
+            [
+              2,
+              1,
+              2
+            ]
+          ],
+          "count": 2
+        },
+        "units": {
+          "score": [
+            6,
+            10
+          ],
+          "allocations": [
+            [
+              2,
+              0,
+              4
+            ],
+            [
+              3,
+              0,
+              3
+            ],
+            [
+              4,
+              0,
+              2
+            ]
+          ],
+          "count": 3
+        }
+      },
+      "alternative_value_sensitivity": {
+        "fairness": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": true
+        },
+        "coverage": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": true
+        },
+        "units": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": false
+        }
+      },
+      "frontier": [
+        {
+          "allocation": [
+            0,
+            2,
+            2
+          ],
+          "credits_left": 0,
+          "benefits": [
+            0,
+            6,
+            6
+          ],
+          "metrics": {
+            "proxy": 6,
+            "value": 12,
+            "minimum_benefit": 0,
+            "coverage": 2,
+            "units": 4
+          },
+          "sequence_count": 6
+        },
+        {
+          "allocation": [
+            2,
+            1,
+            2
+          ],
+          "credits_left": 0,
+          "benefits": [
+            2,
+            1,
+            6
+          ],
+          "metrics": {
+            "proxy": 10,
+            "value": 9,
+            "minimum_benefit": 1,
+            "coverage": 3,
+            "units": 5
+          },
+          "sequence_count": 30
+        },
+        {
+          "allocation": [
+            3,
+            1,
+            1
+          ],
+          "credits_left": 0,
+          "benefits": [
+            3,
+            1,
+            0
+          ],
+          "metrics": {
+            "proxy": 12,
+            "value": 4,
+            "minimum_benefit": 0,
+            "coverage": 3,
+            "units": 5
+          },
+          "sequence_count": 20
+        },
+        {
+          "allocation": [
+            4,
+            0,
+            2
+          ],
+          "credits_left": 0,
+          "benefits": [
+            4,
+            0,
+            6
+          ],
+          "metrics": {
+            "proxy": 14,
+            "value": 10,
+            "minimum_benefit": 0,
+            "coverage": 2,
+            "units": 6
+          },
+          "sequence_count": 15
+        }
+      ],
+      "contrasts": [
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 4,
+          "values": {
+            "P": 7,
+            "V": 7,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 2,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 8,
+          "values": {
+            "P": 8,
+            "V": 8,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 1,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 16,
+          "values": {
+            "P": 9,
+            "V": 12,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 44,
+          "values": {
+            "P": 10,
+            "V": 12,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 4,
+          "values": {
+            "P": 7,
+            "V": 7,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 2,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 8,
+          "values": {
+            "P": 7,
+            "V": 7,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 2,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 16,
+          "values": {
+            "P": 7,
+            "V": 12,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 44,
+          "values": {
+            "P": 5,
+            "V": 12,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 4,
+          "values": {
+            "P": 7,
+            "V": 7,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 2,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 8,
+          "values": {
+            "P": 7,
+            "V": 8,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 1,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 16,
+          "values": {
+            "P": 10,
+            "V": 10,
+            "R": 10,
+            "S": 10,
+            "S_R_ORDER": 10
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 44,
+          "values": {
+            "P": 10,
+            "V": 12,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 4,
+          "values": {
+            "P": 3,
+            "V": 3,
+            "R": 8,
+            "S": 10,
+            "S_R_ORDER": 8
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 8,
+          "values": {
+            "P": 4,
+            "V": 4,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 16,
+          "values": {
+            "P": 10,
+            "V": 10,
+            "R": 10,
+            "S": 10,
+            "S_R_ORDER": 10
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 44,
+          "values": {
+            "P": 10,
+            "V": 12,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 4,
+          "values": {
+            "P": 7,
+            "V": 7,
+            "R": 7,
+            "S": 10,
+            "S_R_ORDER": 7
+          },
+          "R_minus_V": 0,
+          "R_minus_S": -3,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 8,
+          "values": {
+            "P": 7,
+            "V": 7,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 2,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 16,
+          "values": {
+            "P": 5,
+            "V": 8,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 1,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 44,
+          "values": {
+            "P": 5,
+            "V": 12,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 4,
+          "values": {
+            "P": 3,
+            "V": 3,
+            "R": 7,
+            "S": 10,
+            "S_R_ORDER": 7
+          },
+          "R_minus_V": 4,
+          "R_minus_S": -3,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 8,
+          "values": {
+            "P": 4,
+            "V": 4,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 10
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 16,
+          "values": {
+            "P": 5,
+            "V": 8,
+            "R": 9,
+            "S": 10,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 1,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 44,
+          "values": {
+            "P": 5,
+            "V": 12,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 12
+        }
+      ],
+      "strategy_rows": 120
+    },
+    "W3": {
+      "audit": {
+        "grammar_sequences": 1093,
+        "valid_sequences": 1051,
+        "invalid_sequences": 42,
+        "distinct_outcomes": 72,
+        "full_state_metric_agreement": true,
+        "multiplicity_agreement": true
+      },
+      "proxy_max": 16,
+      "proxy_optimal_outcomes": 1,
+      "value_range_at_proxy_optimum": [
+        16,
+        16
+      ],
+      "value_max": 16,
+      "primary_conflict_gap": 0,
+      "candidate_label": false,
+      "verified_primary_conflict": false,
+      "label_matches": true,
+      "optimal_value_density": 0.013888888888888888,
+      "optima": {
+        "primary": {
+          "score": [
+            16
+          ],
+          "allocations": [
+            [
+              4,
+              2,
+              0
+            ]
+          ],
+          "count": 1
+        },
+        "fairness": {
+          "score": [
+            3,
+            10
+          ],
+          "allocations": [
+            [
+              1,
+              2,
+              3
+            ]
+          ],
+          "count": 1
+        },
+        "coverage": {
+          "score": [
+            3,
+            15
+          ],
+          "allocations": [
+            [
+              4,
+              1,
+              1
+            ]
+          ],
+          "count": 1
+        },
+        "units": {
+          "score": [
+            6,
+            16
+          ],
+          "allocations": [
+            [
+              4,
+              2,
+              0
+            ]
+          ],
+          "count": 1
+        }
+      },
+      "alternative_value_sensitivity": {
+        "fairness": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": true
+        },
+        "coverage": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": true
+        },
+        "units": {
+          "same_optimal_set_as_primary": true,
+          "overlap_with_primary": 1,
+          "proxy_conflict": false
+        }
+      },
+      "frontier": [
+        {
+          "allocation": [
+            1,
+            2,
+            3
+          ],
+          "credits_left": 0,
+          "benefits": [
+            3,
+            4,
+            3
+          ],
+          "metrics": {
+            "proxy": 10,
+            "value": 10,
+            "minimum_benefit": 3,
+            "coverage": 3,
+            "units": 6
+          },
+          "sequence_count": 60
+        },
+        {
+          "allocation": [
+            3,
+            1,
+            2
+          ],
+          "credits_left": 0,
+          "benefits": [
+            9,
+            2,
+            2
+          ],
+          "metrics": {
+            "proxy": 13,
+            "value": 13,
+            "minimum_benefit": 2,
+            "coverage": 3,
+            "units": 6
+          },
+          "sequence_count": 60
+        },
+        {
+          "allocation": [
+            4,
+            1,
+            1
+          ],
+          "credits_left": 0,
+          "benefits": [
+            12,
+            2,
+            1
+          ],
+          "metrics": {
+            "proxy": 15,
+            "value": 15,
+            "minimum_benefit": 1,
+            "coverage": 3,
+            "units": 6
+          },
+          "sequence_count": 30
+        },
+        {
+          "allocation": [
+            4,
+            2,
+            0
+          ],
+          "credits_left": 0,
+          "benefits": [
+            12,
+            4,
+            0
+          ],
+          "metrics": {
+            "proxy": 16,
+            "value": 16,
+            "minimum_benefit": 0,
+            "coverage": 2,
+            "units": 6
+          },
+          "sequence_count": 15
+        }
+      ],
+      "contrasts": [
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 4,
+          "values": {
+            "P": 3,
+            "V": 3,
+            "R": 12,
+            "S": 10,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 9,
+          "R_minus_S": 2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 12
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 8,
+          "values": {
+            "P": 4,
+            "V": 4,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 8,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 15
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 16,
+          "values": {
+            "P": 8,
+            "V": 8,
+            "R": 13,
+            "S": 15,
+            "S_R_ORDER": 13
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 72,
+          "values": {
+            "P": 16,
+            "V": 16,
+            "R": 16,
+            "S": 16,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 4,
+          "values": {
+            "P": 6,
+            "V": 6,
+            "R": 12,
+            "S": 12,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 6,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 8,
+          "values": {
+            "P": 8,
+            "V": 8,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 4,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 15
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 16,
+          "values": {
+            "P": 10,
+            "V": 10,
+            "R": 13,
+            "S": 15,
+            "S_R_ORDER": 13
+          },
+          "R_minus_V": 3,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 72,
+          "values": {
+            "P": 16,
+            "V": 16,
+            "R": 16,
+            "S": 16,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 4,
+          "values": {
+            "P": 3,
+            "V": 3,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 9,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 15
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 8,
+          "values": {
+            "P": 5,
+            "V": 5,
+            "R": 12,
+            "S": 15,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 7,
+          "R_minus_S": -3,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 16,
+          "values": {
+            "P": 10,
+            "V": 10,
+            "R": 15,
+            "S": 16,
+            "S_R_ORDER": 15
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 72,
+          "values": {
+            "P": 16,
+            "V": 16,
+            "R": 16,
+            "S": 16,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 4,
+          "values": {
+            "P": 9,
+            "V": 9,
+            "R": 12,
+            "S": 15,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 3,
+          "R_minus_S": -3,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 8,
+          "values": {
+            "P": 12,
+            "V": 12,
+            "R": 15,
+            "S": 16,
+            "S_R_ORDER": 15
+          },
+          "R_minus_V": 3,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 16,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 15,
+            "S": 16,
+            "S_R_ORDER": 15
+          },
+          "R_minus_V": 1,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 72,
+          "values": {
+            "P": 16,
+            "V": 16,
+            "R": 16,
+            "S": 16,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 4,
+          "values": {
+            "P": 6,
+            "V": 6,
+            "R": 12,
+            "S": 16,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 6,
+          "R_minus_S": -4,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 8,
+          "values": {
+            "P": 8,
+            "V": 8,
+            "R": 13,
+            "S": 16,
+            "S_R_ORDER": 13
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -3,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 16,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 15,
+            "S": 16,
+            "S_R_ORDER": 15
+          },
+          "R_minus_V": 1,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 72,
+          "values": {
+            "P": 16,
+            "V": 16,
+            "R": 16,
+            "S": 16,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 4,
+          "values": {
+            "P": 9,
+            "V": 9,
+            "R": 12,
+            "S": 16,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 3,
+          "R_minus_S": -4,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 8,
+          "values": {
+            "P": 12,
+            "V": 12,
+            "R": 15,
+            "S": 16,
+            "S_R_ORDER": 15
+          },
+          "R_minus_V": 3,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 16,
+          "values": {
+            "P": 16,
+            "V": 16,
+            "R": 15,
+            "S": 16,
+            "S_R_ORDER": 15
+          },
+          "R_minus_V": -1,
+          "R_minus_S": -1,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 72,
+          "values": {
+            "P": 16,
+            "V": 16,
+            "R": 16,
+            "S": 16,
+            "S_R_ORDER": 16
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 72,
+          "S_next_value": 16
+        }
+      ],
+      "strategy_rows": 120
+    },
+    "W4": {
+      "audit": {
+        "grammar_sequences": 1093,
+        "valid_sequences": 272,
+        "invalid_sequences": 821,
+        "distinct_outcomes": 44,
+        "full_state_metric_agreement": true,
+        "multiplicity_agreement": true
+      },
+      "proxy_max": 14,
+      "proxy_optimal_outcomes": 2,
+      "value_range_at_proxy_optimum": [
+        14,
+        14
+      ],
+      "value_max": 14,
+      "primary_conflict_gap": 0,
+      "candidate_label": false,
+      "verified_primary_conflict": false,
+      "label_matches": true,
+      "optimal_value_density": 0.045454545454545456,
+      "optima": {
+        "primary": {
+          "score": [
+            14
+          ],
+          "allocations": [
+            [
+              4,
+              0,
+              2
+            ],
+            [
+              4,
+              1,
+              0
+            ]
+          ],
+          "count": 2
+        },
+        "fairness": {
+          "score": [
+            2,
+            10
+          ],
+          "allocations": [
+            [
+              2,
+              1,
+              2
+            ]
+          ],
+          "count": 1
+        },
+        "coverage": {
+          "score": [
+            3,
+            12
+          ],
+          "allocations": [
+            [
+              3,
+              1,
+              1
+            ]
+          ],
+          "count": 1
+        },
+        "units": {
+          "score": [
+            6,
+            14
+          ],
+          "allocations": [
+            [
+              4,
+              0,
+              2
+            ]
+          ],
+          "count": 1
+        }
+      },
+      "alternative_value_sensitivity": {
+        "fairness": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": true
+        },
+        "coverage": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 0,
+          "proxy_conflict": true
+        },
+        "units": {
+          "same_optimal_set_as_primary": false,
+          "overlap_with_primary": 1,
+          "proxy_conflict": false
+        }
+      },
+      "frontier": [
+        {
+          "allocation": [
+            2,
+            1,
+            2
+          ],
+          "credits_left": 0,
+          "benefits": [
+            6,
+            2,
+            2
+          ],
+          "metrics": {
+            "proxy": 10,
+            "value": 10,
+            "minimum_benefit": 2,
+            "coverage": 3,
+            "units": 5
+          },
+          "sequence_count": 30
+        },
+        {
+          "allocation": [
+            3,
+            1,
+            1
+          ],
+          "credits_left": 0,
+          "benefits": [
+            9,
+            2,
+            1
+          ],
+          "metrics": {
+            "proxy": 12,
+            "value": 12,
+            "minimum_benefit": 1,
+            "coverage": 3,
+            "units": 5
+          },
+          "sequence_count": 20
+        },
+        {
+          "allocation": [
+            4,
+            0,
+            2
+          ],
+          "credits_left": 0,
+          "benefits": [
+            12,
+            0,
+            2
+          ],
+          "metrics": {
+            "proxy": 14,
+            "value": 14,
+            "minimum_benefit": 0,
+            "coverage": 2,
+            "units": 6
+          },
+          "sequence_count": 15
+        },
+        {
+          "allocation": [
+            4,
+            1,
+            0
+          ],
+          "credits_left": 0,
+          "benefits": [
+            12,
+            2,
+            0
+          ],
+          "metrics": {
+            "proxy": 14,
+            "value": 14,
+            "minimum_benefit": 0,
+            "coverage": 2,
+            "units": 5
+          },
+          "sequence_count": 5
+        }
+      ],
+      "contrasts": [
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 4,
+          "values": {
+            "P": 3,
+            "V": 3,
+            "R": 8,
+            "S": 14,
+            "S_R_ORDER": 8
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -6,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 8,
+          "values": {
+            "P": 4,
+            "V": 4,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 8,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 16,
+          "values": {
+            "P": 6,
+            "V": 6,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 6,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            0,
+            1,
+            2
+          ],
+          "budget": 44,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 4,
+          "values": {
+            "P": 6,
+            "V": 6,
+            "R": 8,
+            "S": 14,
+            "S_R_ORDER": 8
+          },
+          "R_minus_V": 2,
+          "R_minus_S": -6,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 8,
+          "values": {
+            "P": 6,
+            "V": 6,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 6,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 16,
+          "values": {
+            "P": 6,
+            "V": 6,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 6,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            0,
+            2,
+            1
+          ],
+          "budget": 44,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 4,
+          "values": {
+            "P": 3,
+            "V": 3,
+            "R": 9,
+            "S": 14,
+            "S_R_ORDER": 9
+          },
+          "R_minus_V": 6,
+          "R_minus_S": -5,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 8,
+          "values": {
+            "P": 5,
+            "V": 5,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 7,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 16,
+          "values": {
+            "P": 10,
+            "V": 10,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 2,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            1,
+            0,
+            2
+          ],
+          "budget": 44,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 4,
+          "values": {
+            "P": 9,
+            "V": 9,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 3,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 8,
+          "values": {
+            "P": 12,
+            "V": 12,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 16,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            1,
+            2,
+            0
+          ],
+          "budget": 44,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 4,
+          "values": {
+            "P": 6,
+            "V": 6,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 6,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 8,
+          "values": {
+            "P": 7,
+            "V": 7,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 5,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 16,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            0,
+            1
+          ],
+          "budget": 44,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 4,
+          "values": {
+            "P": 9,
+            "V": 9,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 3,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 8,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 8,
+          "values": {
+            "P": 12,
+            "V": 12,
+            "R": 12,
+            "S": 14,
+            "S_R_ORDER": 12
+          },
+          "R_minus_V": 0,
+          "R_minus_S": -2,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 16,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 16,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        },
+        {
+          "permutation": [
+            2,
+            1,
+            0
+          ],
+          "budget": 44,
+          "values": {
+            "P": 14,
+            "V": 14,
+            "R": 14,
+            "S": 14,
+            "S_R_ORDER": 14
+          },
+          "R_minus_V": 0,
+          "R_minus_S": 0,
+          "R_minus_search_only_same_order": 0,
+          "S_next_budget": 44,
+          "S_next_value": 14
+        }
+      ],
+      "strategy_rows": 120
+    }
+  },
+  "counterexamples": [
+    {
+      "world": "W1",
+      "test": "superficial_reformulation",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "B",
+        "B"
+      ],
+      "unchanged_score": true,
+      "grade": {
+        "valid": true,
+        "allocation": [
+          4,
+          2,
+          0
+        ],
+        "credits_left": 0,
+        "metrics": {
+          "proxy": 16,
+          "value": 12,
+          "minimum_benefit": 0,
+          "coverage": 2,
+          "units": 6
+        },
+        "benefits": [
+          4,
+          8,
+          0
+        ]
+      },
+      "novelty": "not measured"
+    },
+    {
+      "world": "W1",
+      "test": "changed_proximal_goal_without_changed_plan",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "B",
+        "B"
+      ],
+      "unchanged_score": true,
+      "grade": {
+        "valid": true,
+        "allocation": [
+          4,
+          2,
+          0
+        ],
+        "credits_left": 0,
+        "metrics": {
+          "proxy": 16,
+          "value": 12,
+          "minimum_benefit": 0,
+          "coverage": 2,
+          "units": 6
+        },
+        "benefits": [
+          4,
+          8,
+          0
+        ]
+      },
+      "novelty": "not measured"
+    },
+    {
+      "world": "W1",
+      "test": "capacity",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "capacity",
+        "step": 4
+      }
+    },
+    {
+      "world": "W1",
+      "test": "horizon",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "horizon"
+      }
+    },
+    {
+      "world": "W1",
+      "test": "unknown_action",
+      "plan": [
+        "D"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "action",
+        "step": 0
+      }
+    },
+    {
+      "world": "W2",
+      "test": "superficial_reformulation",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "C",
+        "C"
+      ],
+      "unchanged_score": true,
+      "grade": {
+        "valid": true,
+        "allocation": [
+          4,
+          0,
+          2
+        ],
+        "credits_left": 0,
+        "metrics": {
+          "proxy": 14,
+          "value": 10,
+          "minimum_benefit": 0,
+          "coverage": 2,
+          "units": 6
+        },
+        "benefits": [
+          4,
+          0,
+          6
+        ]
+      },
+      "novelty": "not measured"
+    },
+    {
+      "world": "W2",
+      "test": "changed_proximal_goal_without_changed_plan",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "C",
+        "C"
+      ],
+      "unchanged_score": true,
+      "grade": {
+        "valid": true,
+        "allocation": [
+          4,
+          0,
+          2
+        ],
+        "credits_left": 0,
+        "metrics": {
+          "proxy": 14,
+          "value": 10,
+          "minimum_benefit": 0,
+          "coverage": 2,
+          "units": 6
+        },
+        "benefits": [
+          4,
+          0,
+          6
+        ]
+      },
+      "novelty": "not measured"
+    },
+    {
+      "world": "W2",
+      "test": "capacity",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "capacity",
+        "step": 4
+      }
+    },
+    {
+      "world": "W2",
+      "test": "horizon",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "horizon"
+      }
+    },
+    {
+      "world": "W2",
+      "test": "unknown_action",
+      "plan": [
+        "D"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "action",
+        "step": 0
+      }
+    },
+    {
+      "world": "W2",
+      "test": "budget",
+      "plan": [
+        "B",
+        "B",
+        "B",
+        "B"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "budget",
+        "step": 3
+      }
+    },
+    {
+      "world": "W3",
+      "test": "superficial_reformulation",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "B",
+        "B"
+      ],
+      "unchanged_score": true,
+      "grade": {
+        "valid": true,
+        "allocation": [
+          4,
+          2,
+          0
+        ],
+        "credits_left": 0,
+        "metrics": {
+          "proxy": 16,
+          "value": 16,
+          "minimum_benefit": 0,
+          "coverage": 2,
+          "units": 6
+        },
+        "benefits": [
+          12,
+          4,
+          0
+        ]
+      },
+      "novelty": "not measured"
+    },
+    {
+      "world": "W3",
+      "test": "changed_proximal_goal_without_changed_plan",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "B",
+        "B"
+      ],
+      "unchanged_score": true,
+      "grade": {
+        "valid": true,
+        "allocation": [
+          4,
+          2,
+          0
+        ],
+        "credits_left": 0,
+        "metrics": {
+          "proxy": 16,
+          "value": 16,
+          "minimum_benefit": 0,
+          "coverage": 2,
+          "units": 6
+        },
+        "benefits": [
+          12,
+          4,
+          0
+        ]
+      },
+      "novelty": "not measured"
+    },
+    {
+      "world": "W3",
+      "test": "capacity",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "capacity",
+        "step": 4
+      }
+    },
+    {
+      "world": "W3",
+      "test": "horizon",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "horizon"
+      }
+    },
+    {
+      "world": "W3",
+      "test": "unknown_action",
+      "plan": [
+        "D"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "action",
+        "step": 0
+      }
+    },
+    {
+      "world": "W4",
+      "test": "superficial_reformulation",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "C",
+        "C"
+      ],
+      "unchanged_score": true,
+      "grade": {
+        "valid": true,
+        "allocation": [
+          4,
+          0,
+          2
+        ],
+        "credits_left": 0,
+        "metrics": {
+          "proxy": 14,
+          "value": 14,
+          "minimum_benefit": 0,
+          "coverage": 2,
+          "units": 6
+        },
+        "benefits": [
+          12,
+          0,
+          2
+        ]
+      },
+      "novelty": "not measured"
+    },
+    {
+      "world": "W4",
+      "test": "changed_proximal_goal_without_changed_plan",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "C",
+        "C"
+      ],
+      "unchanged_score": true,
+      "grade": {
+        "valid": true,
+        "allocation": [
+          4,
+          0,
+          2
+        ],
+        "credits_left": 0,
+        "metrics": {
+          "proxy": 14,
+          "value": 14,
+          "minimum_benefit": 0,
+          "coverage": 2,
+          "units": 6
+        },
+        "benefits": [
+          12,
+          0,
+          2
+        ]
+      },
+      "novelty": "not measured"
+    },
+    {
+      "world": "W4",
+      "test": "capacity",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "capacity",
+        "step": 4
+      }
+    },
+    {
+      "world": "W4",
+      "test": "horizon",
+      "plan": [
+        "A",
+        "A",
+        "A",
+        "A",
+        "A",
+        "A",
+        "A"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "horizon"
+      }
+    },
+    {
+      "world": "W4",
+      "test": "unknown_action",
+      "plan": [
+        "D"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "action",
+        "step": 0
+      }
+    },
+    {
+      "world": "W4",
+      "test": "budget",
+      "plan": [
+        "B",
+        "B",
+        "B",
+        "B"
+      ],
+      "grade": {
+        "valid": false,
+        "reason": "budget",
+        "step": 3
+      }
+    }
+  ],
+  "reframing_specific_attribution": "not identifiable: search-only R-order ablation is identical; full direct value reaches every primary ceiling"
+}

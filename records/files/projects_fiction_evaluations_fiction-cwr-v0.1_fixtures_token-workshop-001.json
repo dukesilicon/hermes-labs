@@ -1,0 +1,81 @@
+{
+  "schema_version": "fiction-cwr-token-v0.1",
+  "id": "token-workshop-001",
+  "entities": [
+    "ore",
+    "flux",
+    "catalyst",
+    "blank",
+    "coated",
+    "widget"
+  ],
+  "initial": {
+    "ore": 2,
+    "flux": 1,
+    "catalyst": 1,
+    "blank": 0,
+    "coated": 0,
+    "widget": 0
+  },
+  "actions": {
+    "smelt": {
+      "consume": {
+        "ore": 1
+      },
+      "require": {
+        "catalyst": 1
+      },
+      "produce": {
+        "blank": 1
+      },
+      "cost": 1
+    },
+    "coat": {
+      "consume": {
+        "blank": 1,
+        "flux": 1
+      },
+      "require": {
+        "catalyst": 1
+      },
+      "produce": {
+        "coated": 1
+      },
+      "cost": 1
+    },
+    "rivet": {
+      "consume": {
+        "blank": 1,
+        "coated": 1
+      },
+      "require": {
+        "catalyst": 1
+      },
+      "produce": {
+        "widget": 1
+      },
+      "cost": 1
+    }
+  },
+  "goal": {
+    "ore": 0,
+    "flux": 0,
+    "catalyst": 1,
+    "blank": 0,
+    "coated": 0,
+    "widget": 1
+  },
+  "constraints": {
+    "inventory_cap": 6,
+    "minimum": {
+      "catalyst": 1
+    },
+    "maximum": {
+      "widget": 1
+    }
+  },
+  "budget": {
+    "max_actions": 4,
+    "max_cost": 4
+  }
+}

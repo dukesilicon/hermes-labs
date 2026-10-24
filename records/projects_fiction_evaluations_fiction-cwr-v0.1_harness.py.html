@@ -1,0 +1,197 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Reference evaluator · Python — Hermes Labs</title><link rel="stylesheet" href="../project-pages.css"><script src="../freshness-status.js" defer></script><script src="../network-topology.js" defer></script><script src="../neural-field.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a><canvas id="world" aria-hidden="true"></canvas><div class="reading-wash" aria-hidden="true"></div><header class="project-header"><a class="lab-name" href="../reference.html">Hermes Labs</a><a href="../reference.html#projectsPanel">← All projects</a></header><main id="content"><div class="record-heading"><p class="eyebrow">Research library / Source record</p><h1>Reference evaluator · Python</h1><p class="fine-print">Exported: 2026-10-24 (UTC). Source date: Not recorded in a recognized date field. Historical statements retain their original scope and dates; current project summaries may supersede them.</p><p class="record-summary">&quot;&quot;&quot;Offline Fiction-CWR v0.1 token checker. No provider calls or code execution.&quot;&quot;&quot; import argparse import json import re import sys from pathlib import Path</p><a href="../fiction.html">← Project page</a> · <a href="files/projects_fiction_evaluations_fiction-cwr-v0.1_harness.py" download>Download original file</a><details class="provenance"><summary>Source and integrity</summary><p>projects/fiction/evaluations/fiction-cwr-v0.1/harness.py</p><p>SHA-256: 8aa1d402dd9b663a0922f61984c0cfde5eeb9a5cab127190df0a1c6754b1d6b7</p></details></div><article class="reading-panel source-document"><pre><code>&quot;&quot;&quot;Offline Fiction-CWR v0.1 token checker. No provider calls or code execution.&quot;&quot;&quot;
+import argparse
+import json
+import re
+import sys
+from pathlib import Path
+
+VERSION = &quot;fiction-cwr-token-v0.1&quot;
+MAX_JSON_BYTES = 1_048_576
+
+
+class InputError(ValueError):
+    pass
+
+
+def _pairs(pairs):
+    obj = {}
+    for key, value in pairs:
+        if key in obj:
+            raise InputError(f&quot;duplicate JSON key: {key}&quot;)
+        obj[key] = value
+    return obj
+
+
+def parse_json(text):
+    def invalid_constant(value):
+        raise InputError(f&quot;non-finite JSON number: {value}&quot;)
+    try:
+        if type(text) is not str or len(text.encode(&quot;utf-8&quot;)) &gt; MAX_JSON_BYTES:
+            raise InputError(&quot;JSON text exceeds input limit or is not text&quot;)
+        return json.loads(text, object_pairs_hook=_pairs,
+                          parse_constant=invalid_constant)
+    except (ValueError, RecursionError, UnicodeError) as exc:
+        raise InputError(str(exc)) from exc
+
+
+def exact(obj, required, optional=()):
+    if type(obj) is not dict:
+        raise InputError(&quot;expected object&quot;)
+    keys = set(obj)
+    if not set(required) &lt;= keys or not keys &lt;= set(required) | set(optional):
+        raise InputError(f&quot;unexpected or missing keys: {list(obj)}&quot;)
+
+
+def integer(value, lower=0, upper=1000):
+    if type(value) is not int or not lower &lt;= value &lt;= upper:
+        raise InputError(f&quot;expected integer in [{lower}, {upper}]&quot;)
+
+
+def identifier(value):
+    return type(value) is str and re.fullmatch(r&quot;[A-Za-z][A-Za-z0-9_-]{0,63}&quot;, value)
+
+
+def counts(obj, entities, complete=False, positive=False):
+    if type(obj) is not dict or not set(obj) &lt;= set(entities):
+        raise InputError(&quot;count map contains unknown entities or is not an object&quot;)
+    if complete and set(obj) != set(entities):
+        raise InputError(&quot;complete inventory required&quot;)
+    for value in obj.values():
+        integer(value, int(positive))
+
+
+def invariant(world, inventory):
+    c = world[&quot;constraints&quot;]
+    return (all(v &gt;= 0 for v in inventory.values())
+            and sum(inventory.values()) &lt;= c[&quot;inventory_cap&quot;]
+            and all(inventory[k] &gt;= v for k, v in c[&quot;minimum&quot;].items())
+            and all(inventory[k] &lt;= v for k, v in c[&quot;maximum&quot;].items()))
+
+
+def validate_world(world):
+    exact(world, (&quot;schema_version&quot;, &quot;id&quot;, &quot;entities&quot;, &quot;initial&quot;, &quot;actions&quot;,
+                  &quot;goal&quot;, &quot;constraints&quot;, &quot;budget&quot;))
+    if world[&quot;schema_version&quot;] != VERSION or not identifier(world[&quot;id&quot;]):
+        raise InputError(&quot;unsupported world version or invalid id&quot;)
+    entities = world[&quot;entities&quot;]
+    if (type(entities) is not list or not 1 &lt;= len(entities) &lt;= 32
+            or not all(identifier(e) for e in entities)
+            or len(set(entities)) != len(entities)):
+        raise InputError(&quot;entities must be distinct identifiers&quot;)
+    counts(world[&quot;initial&quot;], entities, complete=True)
+    counts(world[&quot;goal&quot;], entities, complete=True)
+    ops = world[&quot;actions&quot;]
+    if (type(ops) is not dict or not 1 &lt;= len(ops) &lt;= 32
+            or not all(identifier(a) for a in ops)):
+        raise InputError(&quot;actions must be named primitive objects&quot;)
+    for op in ops.values():
+        exact(op, (&quot;consume&quot;, &quot;require&quot;, &quot;produce&quot;, &quot;cost&quot;))
+        for key in (&quot;consume&quot;, &quot;require&quot;, &quot;produce&quot;):
+            counts(op[key], entities, positive=True)
+        if set(op[&quot;require&quot;]) &amp; (set(op[&quot;consume&quot;]) | set(op[&quot;produce&quot;])):
+            raise InputError(&quot;retained catalysts cannot be consumed or produced&quot;)
+        if not op[&quot;consume&quot;] and not op[&quot;produce&quot;]:
+            raise InputError(&quot;primitive must have an inventory effect&quot;)
+        integer(op[&quot;cost&quot;], 0, 10000)
+    c = world[&quot;constraints&quot;]
+    exact(c, (&quot;inventory_cap&quot;, &quot;minimum&quot;, &quot;maximum&quot;))
+    integer(c[&quot;inventory_cap&quot;])
+    counts(c[&quot;minimum&quot;], entities)
+    counts(c[&quot;maximum&quot;], entities)
+    b = world[&quot;budget&quot;]
+    exact(b, (&quot;max_actions&quot;, &quot;max_cost&quot;))
+    integer(b[&quot;max_actions&quot;], 0, 64)
+    integer(b[&quot;max_cost&quot;], 0, 100000)
+    if not invariant(world, world[&quot;initial&quot;]):
+        raise InputError(&quot;initial state violates an invariant&quot;)
+    if not invariant(world, world[&quot;goal&quot;]):
+        raise InputError(&quot;goal violates a static invariant&quot;)
+
+
+def load_world(path):
+    world = parse_json(Path(path).read_text(encoding=&quot;utf-8&quot;))
+    validate_world(world)
+    return world
+
+
+def grade(world, output):
+    &quot;&quot;&quot;Grade raw model JSON without repair; traces are evaluator-only.&quot;&quot;&quot;
+    validate_world(world)
+    inventory = dict(world[&quot;initial&quot;])
+    cost = executed = 0
+    def result(passed, failure=None, step=None, detail=None):
+        return {&quot;pass&quot;: passed, &quot;failure&quot;: failure, &quot;step&quot;: step,
+                &quot;detail&quot;: detail, &quot;actions_executed&quot;: executed,
+                &quot;cost&quot;: cost, &quot;final_inventory&quot;: dict(inventory)}
+    try:
+        answer = parse_json(output)
+        exact(answer, (&quot;actions&quot;,))
+        if type(answer[&quot;actions&quot;]) is not list:
+            raise InputError(&quot;actions must be an array&quot;)
+        if not all(identifier(a) for a in answer[&quot;actions&quot;]):
+            raise InputError(&quot;actions must contain primitive identifiers&quot;)
+    except InputError as exc:
+        return result(False, &quot;schema&quot;, detail=str(exc))
+    for step, name in enumerate(answer[&quot;actions&quot;], 1):
+        if name not in world[&quot;actions&quot;]:
+            return result(False, &quot;entity&quot;, step, &quot;unknown primitive&quot;)
+        op = world[&quot;actions&quot;][name]
+        if (step &gt; world[&quot;budget&quot;][&quot;max_actions&quot;]
+                or cost + op[&quot;cost&quot;] &gt; world[&quot;budget&quot;][&quot;max_cost&quot;]):
+            return result(False, &quot;budget&quot;, step, &quot;hard budget exceeded&quot;)
+        if any(inventory[k] &lt; v for k, v in op[&quot;require&quot;].items()):
+            return result(False, &quot;transition&quot;, step, &quot;missing retained catalyst&quot;)
+        if any(inventory[k] &lt; v for k, v in op[&quot;consume&quot;].items()):
+            return result(False, &quot;transition&quot;, step, &quot;missing consumable&quot;)
+        successor = dict(inventory)
+        for key, value in op[&quot;consume&quot;].items():
+            successor[key] -= value
+        for key, value in op[&quot;produce&quot;].items():
+            successor[key] += value
+        if not invariant(world, successor):
+            return result(False, &quot;constraint&quot;, step, &quot;successor violates invariant&quot;)
+        inventory = successor
+        cost += op[&quot;cost&quot;]
+        executed += 1
+    if inventory != world[&quot;goal&quot;]:
+        return result(False, &quot;goal&quot;, detail=&quot;exact final inventory not achieved&quot;)
+    return result(True)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest=&quot;command&quot;, required=True)
+    for command in (&quot;inspect&quot;, &quot;grade&quot;, &quot;solve&quot;):
+        item = sub.add_parser(command)
+        item.add_argument(&quot;world&quot;, type=Path)
+        if command == &quot;grade&quot;:
+            item.add_argument(&quot;answer&quot;, type=Path)
+        if command == &quot;solve&quot;:
+            item.add_argument(&quot;--max-nodes&quot;, type=int, default=100000)
+    sub.add_parser(&quot;self-test&quot;)
+    args = parser.parse_args()
+    if args.command == &quot;self-test&quot;:
+        import unittest
+        suite = unittest.defaultTestLoader.discover(
+            str(Path(__file__).resolve().parent / &quot;tests&quot;))
+        return 0 if unittest.TextTestRunner(verbosity=2).run(suite).wasSuccessful() else 1
+    try:
+        world = load_world(args.world)
+        if args.command == &quot;inspect&quot;:
+            value = {k: world[k] for k in (&quot;id&quot;, &quot;schema_version&quot;, &quot;entities&quot;, &quot;goal&quot;, &quot;budget&quot;)}
+            value[&quot;primitive_names&quot;] = list(world[&quot;actions&quot;])
+        elif args.command == &quot;grade&quot;:
+            value = grade(world, args.answer.read_text(encoding=&quot;utf-8&quot;))
+        else:
+            from oracle import solve
+            value = solve(world, args.max_nodes)
+        print(json.dumps(value, indent=2, sort_keys=True))
+        return 0 if args.command != &quot;grade&quot; or value[&quot;pass&quot;] else 1
+    except (InputError, OSError, UnicodeError) as exc:
+        print(json.dumps({&quot;harness_error&quot;: str(exc)}), file=sys.stderr)
+        return 2
+
+
+if __name__ == &quot;__main__&quot;:
+    raise SystemExit(main())
+</code></pre></article></main><footer>Hermes Labs · Working research record · Snapshot 2026-10-24<br>Background imagery is a visual metaphor. Local preview; not published.</footer></body></html>

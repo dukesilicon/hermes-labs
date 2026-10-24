@@ -1,0 +1,33 @@
+:root{color-scheme:light;--paper:#fafbf9;--ink:#293036;font-family:"Segoe UI",Helvetica,Arial,sans-serif;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);overflow:hidden}
+#world,.paper-grid,.center-haze{position:fixed;inset:0;width:100%;height:100%;pointer-events:none}
+#world{z-index:0}.paper-grid{z-index:1;background-image:linear-gradient(90deg,rgba(77,91,94,.014) 1px,transparent 1px),linear-gradient(rgba(77,91,94,.012) 1px,transparent 1px);background-size:7px 7px}
+.center-haze{z-index:2;background:radial-gradient(ellipse 23vw 10vh at 50% 25%,rgba(250,251,249,.92),rgba(250,251,249,.3) 65%,transparent 100%)}
+header{position:fixed;z-index:5;top:25%;left:50%;transform:translate(-50%,-50%);pointer-events:none;white-space:nowrap}
+.wordmark{margin:0;font-size:42px;font-weight:700;line-height:1.2;letter-spacing:-.045em;color:#293036}
+.mission-panel{position:absolute;top:calc(25svh + 80px);left:50%;transform:translateX(-50%);width:min(540px,calc(100% - 48px));padding:28px 32px;border:1px solid rgba(112,130,133,.09);border-radius:14px;background:linear-gradient(135deg,rgba(255,255,255,.40),rgba(247,250,248,.20));box-shadow:inset 0 1px 0 rgba(255,255,255,.65),0 12px 40px rgba(65,82,79,.025);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);pointer-events:auto}
+.mission-panel p{margin:0;font-size:18px;font-weight:400;line-height:1.7;letter-spacing:-.015em;color:#414b4f}
+.typing-head{box-shadow:1px 0 0 #647b83}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:650px){.mission-panel{padding:24px 26px;top:calc(25svh + 68px)}.mission-panel p{font-size:16px;line-height:1.65}}
+main{position:relative;z-index:3;min-height:100svh;pointer-events:none}footer{position:fixed;z-index:4;bottom:22px;left:32px;color:#747f84;font-size:10px;letter-spacing:.025em;pointer-events:none}.no-script{position:fixed;z-index:4;bottom:46px;left:32px;font-size:12px;color:#747f84}
+@media(max-width:650px){.wordmark{font-size:37.5px}.center-haze{background:radial-gradient(ellipse 40vw 10vh at 50% 25%,#fafbf9df,transparent 100%)}footer{left:20px;bottom:18px;font-size:9px}.no-script{left:20px}}
+
+/* Branching research index: normal flow preserves room for opened panels. */
+body{overflow-x:hidden;overflow-y:auto}header{position:absolute;top:25svh}main{min-height:calc(100svh - 48px)}
+.opening-content{width:min(540px,calc(100% - 48px));margin:0 auto;padding-top:calc(25svh + 80px);padding-bottom:44px}
+.opening-content .mission-panel{position:relative;inset:auto;transform:none;width:100%}
+.research-index{pointer-events:auto;margin-top:27px}button{font:inherit}button:focus-visible{outline:2px solid #68858e;outline-offset:5px}
+.index-choices{display:flex;justify-content:center;gap:48px}.index-trigger{display:flex;align-items:center;gap:14px;padding:10px 0;border:0;background:none;color:#647276;font-size:13px;cursor:pointer;transition:color .2s}.index-trigger span{font-size:15px;transition:transform .3s}.index-trigger:hover,.index-trigger[aria-expanded=true]{color:#283d45}.index-trigger[aria-expanded=true] span{transform:rotate(45deg)}
+.branch-panel{position:relative;margin-top:36px;padding:28px 30px;background:linear-gradient(135deg,rgba(255,255,255,.65),rgba(247,250,248,.5));border:1px solid rgba(112,130,133,.12);border-radius:14px;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);animation:panel-arrive .45s ease both}.branch-panel[hidden]{display:none}
+.branch-line{position:absolute;left:50%;top:-37px;height:36px;width:1px;background:linear-gradient(transparent,#8ba2a880);transform-origin:top;animation:branch-grow .4s ease both}.branch-line:after{content:'';position:absolute;bottom:-3px;left:-2px;width:5px;height:5px;border-radius:50%;background:#8ba2a8}
+.panel-heading h2{font-size:23px;font-weight:500;letter-spacing:-.035em;margin:7px 0 24px}.eyebrow{font-size:10px;letter-spacing:.09em;color:#738389;text-transform:uppercase}.project-list article+article{border-top:1px solid #75858c20;margin-top:22px;padding-top:22px}.project-label{display:flex;flex-wrap:wrap;gap:8px 14px;align-items:baseline;justify-content:space-between}.project-label h3{font-size:17px;font-weight:500;letter-spacing:-.025em;margin:0}.project-status{font-size:10px;color:#718187}.project-list p,.method-detail p{font-size:14px;line-height:1.65;color:#415258;margin:10px 0 0}.project-list .research-stage{font-size:12px;color:#748087;margin-top:7px}.panel-note{font-size:11px;line-height:1.6;color:#748087;border-top:1px solid #75858c20;padding-top:18px;margin:24px 0 0}
+.method-steps{display:flex;flex-wrap:wrap;gap:7px 6px;margin-bottom:24px}.method-step{border:1px solid transparent;border-radius:20px;background:transparent;padding:7px 10px;font-size:11px;color:#728087;cursor:pointer}.method-step:hover{background:#e6eded60}.method-step[aria-pressed=true]{border-color:#82969e35;background:#e4eded80;color:#354d58}.method-detail{min-height:225px}.method-detail h3{font-size:22px;font-weight:400;letter-spacing:-.03em;margin:8px 0}.evidence-line{border-left:1px solid #8ba2a860;padding-left:15px;margin-top:22px}.evidence-line p{margin-top:6px;font-size:13px}
+footer{position:relative;left:auto;bottom:auto;padding:0 32px 20px}
+@keyframes panel-arrive{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}@keyframes branch-grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@media(max-width:650px){.opening-content{padding-top:calc(25svh + 68px)}.branch-panel{padding:24px 22px}.index-choices{gap:36px}footer{left:auto;bottom:auto;padding:0 20px 18px}}
+@media(prefers-reduced-motion:reduce){.branch-panel,.branch-line{animation:none}.index-trigger,.index-trigger span{transition:none}}
+.project-page-link{color:inherit;text-decoration:none}.project-page-link span{font-size:13px;color:#82979f;margin-left:8px}.project-page-link:hover{color:#396575}.project-page-link:focus-visible{outline:2px solid #68858e;outline-offset:5px}
+/* The selected homepage has no caption footer; retain its original viewport balance. */
+body:has(.opening-content):not(:has(footer)) main{min-height:100svh}
+
+.index-trigger,.method-step{min-height:44px;min-width:44px}.project-list a{display:inline-flex;align-items:center;min-height:44px}.branch-panel{scroll-margin-top:24px}@media(max-width:420px){.mission-panel{padding:22px}.branch-panel{padding:24px 18px}.index-choices{gap:12px}.method-steps{gap:5px}}

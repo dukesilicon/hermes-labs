@@ -1,0 +1,82 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Token workshop · JSON fixture — Hermes Labs</title><link rel="stylesheet" href="../project-pages.css"><script src="../freshness-status.js" defer></script><script src="../network-topology.js" defer></script><script src="../neural-field.js" defer></script></head><body><a class="skip" href="#content">Skip to content</a><canvas id="world" aria-hidden="true"></canvas><div class="reading-wash" aria-hidden="true"></div><header class="project-header"><a class="lab-name" href="../reference.html">Hermes Labs</a><a href="../reference.html#projectsPanel">← All projects</a></header><main id="content"><div class="record-heading"><p class="eyebrow">Research library / Source record</p><h1>Token workshop · JSON fixture</h1><p class="fine-print">Exported: 2026-10-24 (UTC). Source date: Not recorded in a recognized date field. Historical statements retain their original scope and dates; current project summaries may supersede them.</p><p class="record-summary">{ &quot;schema_version&quot;: &quot;fiction-cwr-token-v0.1&quot;, &quot;id&quot;: &quot;token-workshop-001&quot;, &quot;entities&quot;: [ &quot;ore&quot;, &quot;flux&quot;, &quot;catalyst&quot;, &quot;blank&quot;, &quot;coated&quot;, &quot;widget&quot; ], &quot;initial&quot;: { &quot;ore&quot;: 2, &quot;flux&quot;: 1, &quot;catalyst&quot;: 1, &quot;blank&quot;: 0, &quot;coated&quot;: 0, &quot;widget&quot;: 0 }, &quot;actions&quot;: { &quot;smelt&quot;: { &quot;consume&quot;: { &quot;ore&quot;: 1 }, &quot;require&quot;: { &quot;catalyst&quot;: 1 }, &quot;produ…</p><a href="../fiction.html">← Project page</a> · <a href="files/projects_fiction_evaluations_fiction-cwr-v0.1_fixtures_token-workshop-001.json" download>Download original file</a><details class="provenance"><summary>Source and integrity</summary><p>projects/fiction/evaluations/fiction-cwr-v0.1/fixtures/token-workshop-001.json</p><p>SHA-256: 450f01b5f659cdd4fadc3d0d66d90828fdf1a75b1e83e73aa2e83ef8b577e6cc</p></details></div><article class="reading-panel source-document"><pre><code>{
+  &quot;schema_version&quot;: &quot;fiction-cwr-token-v0.1&quot;,
+  &quot;id&quot;: &quot;token-workshop-001&quot;,
+  &quot;entities&quot;: [
+    &quot;ore&quot;,
+    &quot;flux&quot;,
+    &quot;catalyst&quot;,
+    &quot;blank&quot;,
+    &quot;coated&quot;,
+    &quot;widget&quot;
+  ],
+  &quot;initial&quot;: {
+    &quot;ore&quot;: 2,
+    &quot;flux&quot;: 1,
+    &quot;catalyst&quot;: 1,
+    &quot;blank&quot;: 0,
+    &quot;coated&quot;: 0,
+    &quot;widget&quot;: 0
+  },
+  &quot;actions&quot;: {
+    &quot;smelt&quot;: {
+      &quot;consume&quot;: {
+        &quot;ore&quot;: 1
+      },
+      &quot;require&quot;: {
+        &quot;catalyst&quot;: 1
+      },
+      &quot;produce&quot;: {
+        &quot;blank&quot;: 1
+      },
+      &quot;cost&quot;: 1
+    },
+    &quot;coat&quot;: {
+      &quot;consume&quot;: {
+        &quot;blank&quot;: 1,
+        &quot;flux&quot;: 1
+      },
+      &quot;require&quot;: {
+        &quot;catalyst&quot;: 1
+      },
+      &quot;produce&quot;: {
+        &quot;coated&quot;: 1
+      },
+      &quot;cost&quot;: 1
+    },
+    &quot;rivet&quot;: {
+      &quot;consume&quot;: {
+        &quot;blank&quot;: 1,
+        &quot;coated&quot;: 1
+      },
+      &quot;require&quot;: {
+        &quot;catalyst&quot;: 1
+      },
+      &quot;produce&quot;: {
+        &quot;widget&quot;: 1
+      },
+      &quot;cost&quot;: 1
+    }
+  },
+  &quot;goal&quot;: {
+    &quot;ore&quot;: 0,
+    &quot;flux&quot;: 0,
+    &quot;catalyst&quot;: 1,
+    &quot;blank&quot;: 0,
+    &quot;coated&quot;: 0,
+    &quot;widget&quot;: 1
+  },
+  &quot;constraints&quot;: {
+    &quot;inventory_cap&quot;: 6,
+    &quot;minimum&quot;: {
+      &quot;catalyst&quot;: 1
+    },
+    &quot;maximum&quot;: {
+      &quot;widget&quot;: 1
+    }
+  },
+  &quot;budget&quot;: {
+    &quot;max_actions&quot;: 4,
+    &quot;max_cost&quot;: 4
+  }
+}
+</code></pre></article></main><footer>Hermes Labs · Working research record · Snapshot 2026-10-24<br>Background imagery is a visual metaphor. Local preview; not published.</footer></body></html>

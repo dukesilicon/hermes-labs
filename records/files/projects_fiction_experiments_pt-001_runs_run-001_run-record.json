@@ -1,0 +1,43 @@
+{
+  "run_id": "run-001",
+  "executed_at_utc": "2026-10-22T23:52:45.667142+00:00",
+  "record_date": "2026-10-23",
+  "record_timezone": "Africa/Lagos",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "[local executable path withheld]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "command": [
+    "run.py",
+    "--output",
+    "runs/run-001"
+  ],
+  "cwd": "[local working directory withheld]",
+  "seed": "not applicable; deterministic",
+  "model": "not applicable; constructed Python policies",
+  "participants": 0,
+  "spend": 0,
+  "conditions": {
+    "P": "Maximize the supplied proxy objective; diagnostic reference.",
+    "V": "Maximize supplied stakeholder total value; no explicit formulation intervention.",
+    "R": "Reconsider the proxy formulation as stakeholder allocation; examine balanced coverage first.",
+    "S": "Optimize supplied value by expanding candidate search; examine high-utilization plans first.",
+    "S_R_ORDER": "Search-only ablation: use exactly R's candidate order without a reframing claim."
+  },
+  "criteria": "PROTOCOL.md specified before first run",
+  "input_code_sha256": {
+    "evaluator.py": "147d8b1bdd4e385f407a783ad4503a6db24c340d751bf251c45cdc20f1ff0417",
+    "PROTOCOL.md": "310a6d676754eed8f21090f4097c03358ad305f4e68b9737bb9d06b744871fd6",
+    "reference.py": "a8391f8725441b157e418fe1e802804cc5caaf0e6577213960621753ba2e243c",
+    "run.py": "3bcd9982b414a951186f566a95131a2e224c72f9192192afeb8374da2b57b2c8",
+    "strategies.py": "bf9e3ab5cf923a1f5ea1102f43d66ee54fe4ec7459011c4255eed1687837c431",
+    "tests\\test_packet.py": "dc31e7835fa277354d87102886017c3b60675954267d46d47dcbbbb04df832b3",
+    "USER-REQUEST.txt": "3bdc8c4881ba5ea8f35b18d40a4aaaa95981c7ddcb97e2d02c966fc0934b09a7",
+    "worlds.json": "4ef891f3893c0b15b0756f7ab2defaeb3aba5ddc8fe98ed4429017feaac4a426"
+  },
+  "limits": [
+    "shared human author of independent implementations",
+    "synthetic normative value",
+    "candidate-evaluation counts do not equal total compute",
+    "no process/novelty measurement"
+  ]
+}

@@ -13,8 +13,6 @@
  document.querySelectorAll('[data-inquiry-open]').forEach(button=>button.addEventListener('click',()=>open(button)));
  dialog.querySelector('.inquiry-close').addEventListener('click',()=>dialog.close());
  dialog.addEventListener('close',()=>{if(location.hash==='#collaboration')history.replaceState(null,'',location.pathname+location.search);opener?.focus({preventScroll:true});});
- function followLink(){if(location.hash==='#collaboration')open(document.querySelector('[data-inquiry-open]'));}
- addEventListener('hashchange',followLink);followLink();
  form.addEventListener('input',()=>{if(!busy)requestId='';});
  form.addEventListener('submit',async event=>{
   event.preventDefault();if(busy||!ready||!form.reportValidity())return;

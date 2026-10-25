@@ -21,4 +21,11 @@
     });
   });
   select(0,false);
+  function followStageLink(){
+    if(typeof location==='undefined')return;
+    const match=/^(?:#method-stage-|#stage-title-)([1-7])$/.exec(location.hash);
+    if(match)select(Number(match[1])-1,false);
+  }
+  if(typeof addEventListener==='function')addEventListener('hashchange',followStageLink);
+  followStageLink();
 })();

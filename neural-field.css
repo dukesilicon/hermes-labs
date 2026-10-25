@@ -49,4 +49,12 @@ body:has(.opening-content):not(:has(footer)) main{min-height:100svh}
 .index-below{border-color:#53879b80;color:#245b70;font-size:14px;font-weight:600;box-shadow:0 0 24px #72a6b833}
 @media(prefers-reduced-motion:reduce){.signal-pulse{filter:none}}
 .signal-spread{animation-delay:.45s;stroke-width:2;opacity:0}
+.home-utility{position:absolute;z-index:6;top:18px;right:24px;display:flex;gap:18px;font-size:12px}
+.home-utility a{display:inline-flex;align-items:center;min-height:44px;color:#526970;text-decoration:none}
+.home-utility a:focus-visible,.collaboration a:focus-visible{outline:2px solid #426975;outline-offset:4px}
+.home-skip{position:fixed;top:-100px;left:16px;z-index:20;padding:14px;background:#fff;color:#245b70}.home-skip:focus{top:8px}
+.project-status,.panel-note,.project-list .research-stage,.eyebrow{color:#536970}
+.collaboration{pointer-events:auto;max-width:540px;margin:60px auto 0;padding:32px 24px 48px;border-top:1px solid #83989e30;scroll-margin-top:28px}
+.collaboration h2{font-size:22px;font-weight:500;letter-spacing:-.025em}.collaboration p{font-size:14px;line-height:1.8;color:#526970}.collaboration a{display:inline-flex;min-height:44px;align-items:center;color:#426975;font-size:13px}.contact-pending{font-size:12px!important}
+@media(max-width:420px){.home-utility{right:24px;justify-content:flex-end;font-size:11px}.collaboration{margin-left:24px;margin-right:24px;padding-left:0;padding-right:0}}
 @media(prefers-reduced-motion:reduce){.signal-spread{opacity:.5}}

@@ -13,6 +13,7 @@
   <script src="research-index.js" defer></script>
   <script src="method-interface.js" defer></script>
 <!-- publication:start --><meta name="description" content="Experimental Cognitive Engineering: investigating human cognitive capabilities and their possible artificial reconstruction."><meta name="robots" content="index,follow"><link rel="canonical" href="https://hermes-labs-five.vercel.app/"><link rel="icon" href="favicon.svg" type="image/svg+xml"><meta property="og:type" content="website"><meta property="og:site_name" content="Hermes Labs"><meta property="og:title" content="Hermes Labs"><meta property="og:description" content="Experimental Cognitive Engineering: investigating human cognitive capabilities and their possible artificial reconstruction."><meta property="og:url" content="https://hermes-labs-five.vercel.app/"><meta name="twitter:card" content="summary"><!-- publication:end -->
+<link rel="stylesheet" href="inquiry.css"><script src="inquiry.js" defer></script>
 </head>
 <body><a class="home-skip" href="#projectsPanel">Skip to research programs</a>
   <canvas id="world" aria-hidden="true"></canvas>
@@ -21,7 +22,7 @@
   <header>
     <h1 class="wordmark">Hermes Labs</h1>
   </header>
-  <nav class="home-utility" aria-label="Research inquiries"><a href="#collaboration">Research inquiries</a></nav>
+  <nav class="home-utility" aria-label="Research inquiries"><button type="button" data-inquiry-open aria-haspopup="dialog" aria-controls="collaboration">Research inquiries</button></nav>
   <main id="main" aria-label="Hermes Labs homepage">
     <div class="opening-content">
     <section class="mission-panel" aria-label="Our mission">
@@ -104,8 +105,9 @@
       </section>
     </section>
     </div>
-  <section id="collaboration" class="collaboration"><h2>Research inquiries</h2><p>Questions about a research record, methodological criticism, and proposals for collaboration are welcome.</p><p class="contact-pending">A private contact channel is being prepared.</p><a href="#projectsPanel">Explore the research programs</a></section></main>
+  </main>
   <noscript><p class="no-script">Enable JavaScript to explore the live animation.</p></noscript>
+<!-- inquiry:start --><dialog id="collaboration" class="inquiry-dialog" aria-labelledby="inquiry-title" aria-describedby="inquiry-intro"><button class="inquiry-close" type="button" aria-label="Close research inquiry">×</button><h2 id="inquiry-title">Research inquiries</h2><p id="inquiry-intro">A question, an observation, or a possibility for collaboration.</p><form id="inquiry-form"><label for="inquiry-email">Your email</label><input id="inquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"><label for="inquiry-message">Your inquiry</label><textarea id="inquiry-message" name="message" rows="5" minlength="10" maxlength="5000" required placeholder="Tell us what you would like to explore."></textarea><div class="inquiry-trap" aria-hidden="true"><label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div><p class="inquiry-privacy">Your email and message are sent privately to Hermes Labs through Resend so we can respond.</p><button class="inquiry-send" type="submit" disabled>Send inquiry</button><p id="inquiry-status" role="status" aria-live="polite">Checking email availability…</p></form></dialog><!-- inquiry:end -->
 </body>
 </html>
 

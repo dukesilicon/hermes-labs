@@ -13,6 +13,25 @@ summary{min-height:44px;padding:10px 0;cursor:pointer}
 .record-meta{display:grid;grid-template-columns:1fr 1fr;gap:16px 24px;margin:24px 0}
 .record-meta dt{font-size:11px;color:#52666e}.record-meta dd{margin:5px 0 0;font-size:14px;line-height:1.6}
 .record-contents nav{display:grid;gap:4px}.record-contents a{padding:10px 0;font-size:13px}
+.record-heading{padding:28px 0 20px;max-width:72ch}.record-heading h1{font-size:clamp(32px,5vw,48px);margin:16px 0 20px;line-height:1.15}
+.record-heading .record-summary{font-size:18px;line-height:1.75;margin:0 0 24px;color:#415860}
+.record-heading .record-meta{padding-top:20px;border-top:1px solid #83989e30;grid-template-columns:repeat(2,minmax(0,1fr))}
+.record-authority{font-size:14px;line-height:1.8;color:#536970;max-width:68ch}
+.record-actions,.record-reading-nav{display:flex;flex-wrap:wrap;gap:8px 24px;align-items:center}
+.record-actions a,.record-return{display:inline-flex;align-items:center;min-height:44px;font-size:13px}
+.record-reading-nav{padding:8px 0 16px;border-bottom:1px solid #83989e30;margin:0 0 12px}
+.record-reading-nav a{display:inline-flex;align-items:center;min-height:44px;font-size:12px;text-decoration:none}
+.record-contents{margin:0 0 24px;font-size:13px}
+.record-provenance{border:1px solid #83989e35;border-radius:12px;margin:28px 0;padding:8px 24px;font-size:14px;color:#415860;line-height:1.8;scroll-margin-top:24px}
+.record-provenance>summary{font-size:15px;color:#34474e}.record-provenance .provenance-content{padding:4px 0 24px}
+.provenance-content h2{font-size:21px;font-weight:500}.provenance-content h3{font-size:18px;font-weight:500}
+.provenance-meta{display:grid;gap:14px;font-size:13px}.provenance-meta dt{font-size:11px;color:#536970}.provenance-meta dd{margin:3px 0}
+.provenance-content code{font-size:12px;overflow-wrap:anywhere}.provenance-content .export-note{border-left:2px solid #8ba4ad;padding-left:15px}
+.source-citation{font-size:.85em;white-space:nowrap}.source-document p{max-width:70ch}
+.record-connection{display:block;padding:16px 0;border-top:1px solid #83989e30;text-decoration:none;min-height:44px}
+.record-connection span{display:block;font-size:14px}.record-connection small{display:block;margin-top:7px;font-size:12px;color:#536970;line-height:1.7}
+.record-connections .record-return{margin-top:20px}#scientific-record,#record-orientation{scroll-margin-top:24px}
+@media(max-width:600px){.record-heading{padding-top:16px}.record-heading .record-summary{font-size:16px}.record-heading .record-meta{grid-template-columns:1fr}.record-provenance{padding:8px 18px}.record-reading-nav{gap:0 18px}.record-reading-nav a{font-size:11px}.source-citation{white-space:normal}}
 .data-field{border-top:1px solid #83989e30}.data-field summary{font-weight:500;overflow-wrap:anywhere}
 .data-field summary small{font-weight:400;color:#52666e;margin-left:12px}
 .data-field pre{max-height:60vh;overflow:auto;white-space:pre}

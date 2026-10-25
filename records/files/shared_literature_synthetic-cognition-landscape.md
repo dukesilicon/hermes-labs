@@ -3,7 +3,7 @@
 Status: external evidence and Hermes interpretation; targeted scan, not an exhaustive priority assessment.
 Checked: 2026-10-14.
 
-Hermes does not claim to invent synthetic cognition, cognitive architectures, agent memory, or affective computation. Source S49 (4235daa5-4d07-4b8d-b677-8514cb80b63b) corrected the earlier category confidence.
+Hermes does not claim to invent synthetic cognition, cognitive architectures, agent memory, or affective computation. Source S49 ([private source identifier withheld]) corrected the earlier category confidence.
 
 | Primary/first-party source | Supported claim | Limit |
 | --- | --- | --- |

@@ -46,22 +46,22 @@ Fiction Experiment 001 / Micro1 tests both Project Fiction and this method. Its 
 
 ## Source turns
 
-Source: *Evaluate Thoth’s Necessity*, conversation `6acedc87-679c-83e9-9245-512e08061f32`.
+Source: *Evaluate Thoth’s Necessity*, conversation `[private source identifier withheld]`.
 
 | Reference | Source turn ID |
 | --- | --- |
-| S33 | `509d32e9-1186-44b8-809d-43206a9bafb2` |
-| S34 | `4ae822fd-9e30-4485-8edb-f8e49385460a` |
-| S35 | `9b2c3167-cf86-46a1-b3d3-ce101ea2668f` |
-| S36 | `393909ec-a8cb-4b0b-93a7-e4e1bfdd92eb` |
-| S37 | `f1246328-e0d9-4626-abc2-97b298385d3f` |
-| S38 | `14b23e7f-2aa3-4011-8015-0d63afa8cbb2` |
-| S39 | `0654cdf7-d97c-4cc1-a408-7fdb70cedbf6` |
-| S41 | `25c4564e-318f-493c-801d-ac65915f5867` |
-| S42 | `0b103f6d-5f42-4529-80f2-8ce36aaff157` |
-| S43 | `abf80c5b-0f05-4caf-b911-2285ec3c2554` |
-| S44 | `25a5d062-3910-4ab1-9e4d-c5c8a18d55af` |
-| S58 | `28c352bc-9450-4328-add7-1f6c78178d44` |
+| S33 | `[private source identifier withheld]` |
+| S34 | `[private source identifier withheld]` |
+| S35 | `[private source identifier withheld]` |
+| S36 | `[private source identifier withheld]` |
+| S37 | `[private source identifier withheld]` |
+| S38 | `[private source identifier withheld]` |
+| S39 | `[private source identifier withheld]` |
+| S41 | `[private source identifier withheld]` |
+| S42 | `[private source identifier withheld]` |
+| S43 | `[private source identifier withheld]` |
+| S44 | `[private source identifier withheld]` |
+| S58 | `[private source identifier withheld]` |
 
 Workspace reconciliation draws on `AGENTS.md`, `lab/research-principles.md`, `projects/fiction/methodology.md`, `projects/fiction/decision-gates.md`, and `experiments/registry.md`; those records supply additional current safeguards, not empirical validation of the conversational thesis.
 

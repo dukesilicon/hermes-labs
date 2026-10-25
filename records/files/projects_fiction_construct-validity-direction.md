@@ -8,7 +8,7 @@ Integrated: 2026-10-23. This is a source reconciliation, not a new literature re
 
 The user requested integration of [Fiction Research Program](https://chatgpt.com/share/6ada9ee7-ceb0-83ea-996f-af2d5d0a1edb). [Retrieved source excerpts](../../docs/handovers/2026-10-23-fiction-research-program-source.md) preserve the available connected-chat text and message IDs; the adjacent JSON preserves the tool response data. The shared page also exposed the initial hypothesis-map discussion and a first-cycle report. Its Cycle 2 and Cycle 3 assistant report bodies displayed “This response couldn’t load”; the connector returned unresolved content references for them. The uploaded file and images were not inspected. This integration does not claim a complete conversation export or recovery of the missing memoranda.
 
-The strongest source anchors are user message `0986191b-3f08-4962-b1af-6ea37f8bb6fb` (Cycle 2 assignment) and `77e208bd-078e-401a-85df-befb1c4a941b` (Cycle 2 review / Cycle 3 direction). Their text was read in both the shared page and connected chat. Record dates are integration dates; historical timestamps are retained in the source.
+The strongest source anchors are user message `[private source identifier withheld]` (Cycle 2 assignment) and `[private source identifier withheld]` (Cycle 2 review / Cycle 3 direction). Their text was read in both the shared page and connected chat. Record dates are integration dates; historical timestamps are retained in the source.
 
 ## Accepted methodological direction
 

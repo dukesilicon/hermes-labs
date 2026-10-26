@@ -8,7 +8,7 @@ export default {
   const available=!!(RESEND_API_KEY&&INQUIRY_TO_EMAIL&&INQUIRY_FROM_EMAIL);
   if(request.method==='GET')return reply(200,{available});
   if(request.method!=='POST')return reply(405,{error:'Method not allowed'});
-  const allowed=['https://hermes-labs-five.vercel.app',...(VERCEL_URL?['https://'+VERCEL_URL]:[])];
+  const allowed=['https://www.hermeslabs.website','https://hermes-labs-five.vercel.app',...(VERCEL_URL?['https://'+VERCEL_URL]:[])];
   if(!allowed.includes(request.headers.get('origin')))return reply(403,{error:'Origin not allowed'});
   if(!available)return reply(503,{error:'Email delivery unavailable'});
   if(!request.headers.get('content-type')?.startsWith('application/json'))return reply(415,{error:'JSON required'});

@@ -23,9 +23,10 @@
   select(0,false);
   function followStageLink(){
     if(typeof location==='undefined')return;
-    const match=/^(?:#method-stage-|#stage-title-)([1-7])$/.exec(location.hash);
+    const id=typeof HermesRoutes==='undefined'?location.hash.slice(1):HermesRoutes.current()?.id||'';
+    const match=/^(?:method-stage-|stage-title-)([1-7])$/.exec(id);
     if(match)select(Number(match[1])-1,false);
   }
-  if(typeof addEventListener==='function')addEventListener('hashchange',followStageLink);
+  if(typeof addEventListener==='function')addEventListener('hermes:route',followStageLink);
   followStageLink();
 })();

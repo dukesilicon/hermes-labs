@@ -4,13 +4,238 @@
   "outputDirectory": ".",
   "redirects": [
     {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
       "source": "/reference.html",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/index.html",
-      "destination": "/",
+      "source": "/fiction.html",
+      "destination": "/projects/fiction",
+      "permanent": true
+    },
+    {
+      "source": "/imagination.html",
+      "destination": "/projects/imagination",
+      "permanent": true
+    },
+    {
+      "source": "/daydream.html",
+      "destination": "/projects/daydream",
+      "permanent": true
+    },
+    {
+      "source": "/affect.html",
+      "destination": "/projects/affect",
+      "permanent": true
+    },
+    {
+      "source": "/artifact.html",
+      "destination": "/projects/fiction/apparatus",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_README.md.html",
+      "destination": "/research/fiction/overview",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_research-status.md.html",
+      "destination": "/research/fiction/research-status",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_research-question.md.html",
+      "destination": "/research/fiction/research-question",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_methodology.md.html",
+      "destination": "/research/fiction/methodology",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_imagination_README.md.html",
+      "destination": "/research/imagination/overview",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_imagination_research-status.md.html",
+      "destination": "/research/imagination/research-status",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_imagination_research-question.md.html",
+      "destination": "/research/imagination/research-question",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_imagination_methodology.md.html",
+      "destination": "/research/imagination/methodology",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_daydream_README.md.html",
+      "destination": "/research/daydream/overview",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_daydream_research-status.md.html",
+      "destination": "/research/daydream/research-status",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_daydream_research-question.md.html",
+      "destination": "/research/daydream/research-question",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_daydream_methodology.md.html",
+      "destination": "/research/daydream/methodology",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_affect_README.md.html",
+      "destination": "/research/affect/overview",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_affect_research-status.md.html",
+      "destination": "/research/affect/research-status",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_hypotheses.md.html",
+      "destination": "/research/fiction/hypotheses",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_literature_cognitive-science-baseline-review-v0.1.md.html",
+      "destination": "/research/fiction/literature/cognitive-science-baseline-review-v0.1",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_methodology-audit.md.html",
+      "destination": "/research/fiction/methodology-audit",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_construct-validity-direction.md.html",
+      "destination": "/research/fiction/construct-validity-direction",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_decision-gates.md.html",
+      "destination": "/research/fiction/decision-gates",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_hypothesis-change-log.md.html",
+      "destination": "/research/fiction/hypothesis-change-log",
+      "permanent": true
+    },
+    {
+      "source": "/records/experiments_registry.md.html",
+      "destination": "/research/experiment-registry",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_experiments_pilot-pre-test-redesign.md.html",
+      "destination": "/research/fiction/experiments/pilot-pre-test-redesign",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_experiments_fiction-cwr-exp-0002.md.html",
+      "destination": "/research/fiction/experiments/fiction-cwr-exp-0002",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_experiments_fiction-cwr-workflow-exp-0003.md.html",
+      "destination": "/research/fiction/experiments/fiction-cwr-workflow-exp-0003",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_README.md.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/overview",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_DESIGN.md.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/design",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_TASK-CATALOG.md.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/task-catalog",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_GRADER.md.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/grader",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_MATCHING-AUDIT-v0.1.1.md.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/matching-audit-v0.1.1",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_VERIFICATION.md.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/verification",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_harness.py.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/harness",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_oracle.py.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/oracle",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_fixtures_token-workshop-001.json.html",
+      "destination": "/research/fiction/evaluations/fiction-cwr-v0.1/fixtures/token-workshop-001",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_experiments_pt-001_README.md.html",
+      "destination": "/research/fiction/experiments/pt-001/overview",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_experiments_pt-001_PROTOCOL.md.html",
+      "destination": "/research/fiction/experiments/pt-001/protocol",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_experiments_pt-001_runs_run-001_results.json.html",
+      "destination": "/research/fiction/experiments/pt-001/run-001/results",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_experiments_pt-001_runs_run-001_run-record.json.html",
+      "destination": "/research/fiction/experiments/pt-001/run-001/run-record",
+      "permanent": true
+    },
+    {
+      "source": "/records/projects_fiction_experiments_pt-001_runs_run-001_strategies.csv.html",
+      "destination": "/research/fiction/experiments/pt-001/run-001/strategies",
+      "permanent": true
+    },
+    {
+      "source": "/records/lab_hermes-method.md.html",
+      "destination": "/research/hermes-method",
+      "permanent": true
+    },
+    {
+      "source": "/records/shared_literature_synthetic-cognition-landscape.md.html",
+      "destination": "/research/synthetic-cognition-landscape",
       "permanent": true
     }
   ],
@@ -23,6 +248,408 @@
           "value": "noindex"
         }
       ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/projects",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/method",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/method/section/:section",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/projects/section/:section",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/section/:section",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/method/question",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/method/process",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/method/in-practice",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/method/why-hermes",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/method/possible-minds",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/projects/fiction",
+      "destination": "/fiction.html"
+    },
+    {
+      "source": "/projects/fiction/section/:section",
+      "destination": "/fiction.html"
+    },
+    {
+      "source": "/projects/imagination",
+      "destination": "/imagination.html"
+    },
+    {
+      "source": "/projects/imagination/section/:section",
+      "destination": "/imagination.html"
+    },
+    {
+      "source": "/projects/daydream",
+      "destination": "/daydream.html"
+    },
+    {
+      "source": "/projects/daydream/section/:section",
+      "destination": "/daydream.html"
+    },
+    {
+      "source": "/projects/affect",
+      "destination": "/affect.html"
+    },
+    {
+      "source": "/projects/affect/section/:section",
+      "destination": "/affect.html"
+    },
+    {
+      "source": "/projects/fiction/apparatus",
+      "destination": "/artifact.html"
+    },
+    {
+      "source": "/projects/fiction/apparatus/section/:section",
+      "destination": "/artifact.html"
+    },
+    {
+      "source": "/research/fiction/overview",
+      "destination": "/records/projects_fiction_README.md.html"
+    },
+    {
+      "source": "/research/fiction/overview/section/:section",
+      "destination": "/records/projects_fiction_README.md.html"
+    },
+    {
+      "source": "/research/fiction/research-status",
+      "destination": "/records/projects_fiction_research-status.md.html"
+    },
+    {
+      "source": "/research/fiction/research-status/section/:section",
+      "destination": "/records/projects_fiction_research-status.md.html"
+    },
+    {
+      "source": "/research/fiction/research-question",
+      "destination": "/records/projects_fiction_research-question.md.html"
+    },
+    {
+      "source": "/research/fiction/research-question/section/:section",
+      "destination": "/records/projects_fiction_research-question.md.html"
+    },
+    {
+      "source": "/research/fiction/methodology",
+      "destination": "/records/projects_fiction_methodology.md.html"
+    },
+    {
+      "source": "/research/fiction/methodology/section/:section",
+      "destination": "/records/projects_fiction_methodology.md.html"
+    },
+    {
+      "source": "/research/imagination/overview",
+      "destination": "/records/projects_imagination_README.md.html"
+    },
+    {
+      "source": "/research/imagination/overview/section/:section",
+      "destination": "/records/projects_imagination_README.md.html"
+    },
+    {
+      "source": "/research/imagination/research-status",
+      "destination": "/records/projects_imagination_research-status.md.html"
+    },
+    {
+      "source": "/research/imagination/research-status/section/:section",
+      "destination": "/records/projects_imagination_research-status.md.html"
+    },
+    {
+      "source": "/research/imagination/research-question",
+      "destination": "/records/projects_imagination_research-question.md.html"
+    },
+    {
+      "source": "/research/imagination/research-question/section/:section",
+      "destination": "/records/projects_imagination_research-question.md.html"
+    },
+    {
+      "source": "/research/imagination/methodology",
+      "destination": "/records/projects_imagination_methodology.md.html"
+    },
+    {
+      "source": "/research/imagination/methodology/section/:section",
+      "destination": "/records/projects_imagination_methodology.md.html"
+    },
+    {
+      "source": "/research/daydream/overview",
+      "destination": "/records/projects_daydream_README.md.html"
+    },
+    {
+      "source": "/research/daydream/overview/section/:section",
+      "destination": "/records/projects_daydream_README.md.html"
+    },
+    {
+      "source": "/research/daydream/research-status",
+      "destination": "/records/projects_daydream_research-status.md.html"
+    },
+    {
+      "source": "/research/daydream/research-status/section/:section",
+      "destination": "/records/projects_daydream_research-status.md.html"
+    },
+    {
+      "source": "/research/daydream/research-question",
+      "destination": "/records/projects_daydream_research-question.md.html"
+    },
+    {
+      "source": "/research/daydream/research-question/section/:section",
+      "destination": "/records/projects_daydream_research-question.md.html"
+    },
+    {
+      "source": "/research/daydream/methodology",
+      "destination": "/records/projects_daydream_methodology.md.html"
+    },
+    {
+      "source": "/research/daydream/methodology/section/:section",
+      "destination": "/records/projects_daydream_methodology.md.html"
+    },
+    {
+      "source": "/research/affect/overview",
+      "destination": "/records/projects_affect_README.md.html"
+    },
+    {
+      "source": "/research/affect/overview/section/:section",
+      "destination": "/records/projects_affect_README.md.html"
+    },
+    {
+      "source": "/research/affect/research-status",
+      "destination": "/records/projects_affect_research-status.md.html"
+    },
+    {
+      "source": "/research/affect/research-status/section/:section",
+      "destination": "/records/projects_affect_research-status.md.html"
+    },
+    {
+      "source": "/research/fiction/hypotheses",
+      "destination": "/records/projects_fiction_hypotheses.md.html"
+    },
+    {
+      "source": "/research/fiction/hypotheses/section/:section",
+      "destination": "/records/projects_fiction_hypotheses.md.html"
+    },
+    {
+      "source": "/research/fiction/literature/cognitive-science-baseline-review-v0.1",
+      "destination": "/records/projects_fiction_literature_cognitive-science-baseline-review-v0.1.md.html"
+    },
+    {
+      "source": "/research/fiction/literature/cognitive-science-baseline-review-v0.1/section/:section",
+      "destination": "/records/projects_fiction_literature_cognitive-science-baseline-review-v0.1.md.html"
+    },
+    {
+      "source": "/research/fiction/methodology-audit",
+      "destination": "/records/projects_fiction_methodology-audit.md.html"
+    },
+    {
+      "source": "/research/fiction/methodology-audit/section/:section",
+      "destination": "/records/projects_fiction_methodology-audit.md.html"
+    },
+    {
+      "source": "/research/fiction/construct-validity-direction",
+      "destination": "/records/projects_fiction_construct-validity-direction.md.html"
+    },
+    {
+      "source": "/research/fiction/construct-validity-direction/section/:section",
+      "destination": "/records/projects_fiction_construct-validity-direction.md.html"
+    },
+    {
+      "source": "/research/fiction/decision-gates",
+      "destination": "/records/projects_fiction_decision-gates.md.html"
+    },
+    {
+      "source": "/research/fiction/decision-gates/section/:section",
+      "destination": "/records/projects_fiction_decision-gates.md.html"
+    },
+    {
+      "source": "/research/fiction/hypothesis-change-log",
+      "destination": "/records/projects_fiction_hypothesis-change-log.md.html"
+    },
+    {
+      "source": "/research/fiction/hypothesis-change-log/section/:section",
+      "destination": "/records/projects_fiction_hypothesis-change-log.md.html"
+    },
+    {
+      "source": "/research/experiment-registry",
+      "destination": "/records/experiments_registry.md.html"
+    },
+    {
+      "source": "/research/experiment-registry/section/:section",
+      "destination": "/records/experiments_registry.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pilot-pre-test-redesign",
+      "destination": "/records/projects_fiction_experiments_pilot-pre-test-redesign.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pilot-pre-test-redesign/section/:section",
+      "destination": "/records/projects_fiction_experiments_pilot-pre-test-redesign.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/fiction-cwr-exp-0002",
+      "destination": "/records/projects_fiction_experiments_fiction-cwr-exp-0002.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/fiction-cwr-exp-0002/section/:section",
+      "destination": "/records/projects_fiction_experiments_fiction-cwr-exp-0002.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/fiction-cwr-workflow-exp-0003",
+      "destination": "/records/projects_fiction_experiments_fiction-cwr-workflow-exp-0003.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/fiction-cwr-workflow-exp-0003/section/:section",
+      "destination": "/records/projects_fiction_experiments_fiction-cwr-workflow-exp-0003.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/overview",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_README.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/overview/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_README.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/design",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_DESIGN.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/design/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_DESIGN.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/task-catalog",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_TASK-CATALOG.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/task-catalog/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_TASK-CATALOG.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/grader",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_GRADER.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/grader/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_GRADER.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/matching-audit-v0.1.1",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_MATCHING-AUDIT-v0.1.1.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/matching-audit-v0.1.1/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_MATCHING-AUDIT-v0.1.1.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/verification",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_VERIFICATION.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/verification/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_VERIFICATION.md.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/harness",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_harness.py.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/harness/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_harness.py.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/oracle",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_oracle.py.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/oracle/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_oracle.py.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/fixtures/token-workshop-001",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_fixtures_token-workshop-001.json.html"
+    },
+    {
+      "source": "/research/fiction/evaluations/fiction-cwr-v0.1/fixtures/token-workshop-001/section/:section",
+      "destination": "/records/projects_fiction_evaluations_fiction-cwr-v0.1_fixtures_token-workshop-001.json.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/overview",
+      "destination": "/records/projects_fiction_experiments_pt-001_README.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/overview/section/:section",
+      "destination": "/records/projects_fiction_experiments_pt-001_README.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/protocol",
+      "destination": "/records/projects_fiction_experiments_pt-001_PROTOCOL.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/protocol/section/:section",
+      "destination": "/records/projects_fiction_experiments_pt-001_PROTOCOL.md.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/run-001/results",
+      "destination": "/records/projects_fiction_experiments_pt-001_runs_run-001_results.json.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/run-001/results/section/:section",
+      "destination": "/records/projects_fiction_experiments_pt-001_runs_run-001_results.json.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/run-001/run-record",
+      "destination": "/records/projects_fiction_experiments_pt-001_runs_run-001_run-record.json.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/run-001/run-record/section/:section",
+      "destination": "/records/projects_fiction_experiments_pt-001_runs_run-001_run-record.json.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/run-001/strategies",
+      "destination": "/records/projects_fiction_experiments_pt-001_runs_run-001_strategies.csv.html"
+    },
+    {
+      "source": "/research/fiction/experiments/pt-001/run-001/strategies/section/:section",
+      "destination": "/records/projects_fiction_experiments_pt-001_runs_run-001_strategies.csv.html"
+    },
+    {
+      "source": "/research/hermes-method",
+      "destination": "/records/lab_hermes-method.md.html"
+    },
+    {
+      "source": "/research/hermes-method/section/:section",
+      "destination": "/records/lab_hermes-method.md.html"
+    },
+    {
+      "source": "/research/synthetic-cognition-landscape",
+      "destination": "/records/shared_literature_synthetic-cognition-landscape.md.html"
+    },
+    {
+      "source": "/research/synthetic-cognition-landscape/section/:section",
+      "destination": "/records/shared_literature_synthetic-cognition-landscape.md.html"
     }
   ]
 }

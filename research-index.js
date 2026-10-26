@@ -39,7 +39,7 @@
     activePanel = opening ? document.getElementById(button.getAttribute('aria-controls')) : null;
     signal.hidden = !opening;
     cue.hidden = true;
-    if(event.isTrusted)history.pushState(null,'',opening?'#'+activePanel.id:location.pathname+location.search);
+    if(event.isTrusted)HermesRoutes.push('index.html',opening?activePanel.id:'');
     if (opening) {
       const choices = button.parentElement.getBoundingClientRect();
       const trigger = button.getBoundingClientRect();
@@ -61,13 +61,13 @@
   document.querySelector('.research-index').addEventListener('keydown', event => {
     if (event.key !== 'Escape') return;
     const open = controls.find(control => control.getAttribute('aria-expanded') === 'true');
-    if (open) { history.pushState(null,'',location.pathname+location.search);open.click(); open.focus(); }
+    if (open) { HermesRoutes.push('index.html');open.click(); open.focus(); }
   });
 
 })();
 // Restore the index on direct links and browser history navigation.
 function restoreIndex(){
- const hash=location.hash.slice(1);
+ const hash=HermesRoutes.current()?.id||'';
  const target=document.getElementById(hash);
  const panelId=hash==='projectsPanel'?'projectsPanel':(hash==='methodPanel'||target?.closest('#methodPanel')?'methodPanel':null);
  if(!panelId){
@@ -77,7 +77,7 @@ function restoreIndex(){
  const control=document.querySelector('[aria-controls="'+panelId+'"]');
  if(control&&control.getAttribute('aria-expanded')!=='true')control.click();
  const panel=target||document.getElementById(panelId);panel.tabIndex=-1;
- requestAnimationFrame(()=>{panel.scrollIntoView({block:'start'});panel.focus({preventScroll:true});});
+ requestAnimationFrame(()=>{panel.scrollIntoView({block:'start',behavior:'instant'});panel.focus({preventScroll:true});});
 }
-addEventListener('hashchange',restoreIndex);addEventListener('popstate',restoreIndex);restoreIndex();
+addEventListener('hermes:route',restoreIndex);restoreIndex();
 

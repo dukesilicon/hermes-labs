@@ -15,6 +15,7 @@
     const choices=button.parentElement.getBoundingClientRect(),trigger=button.getBoundingClientRect();
     const x=Math.max(80,Math.min(choices.width-80,trigger.left+trigger.width/2-choices.left));
     signal.style.left=`clamp(80px, ${x}px, calc(100% - 80px))`;
+    signal.style.top=`${choices.height}px`;
   }
   addEventListener('resize',()=>{const selected=controls.find(control=>control.getAttribute('aria-expanded')==='true');if(selected)positionSignal(selected);});
   const observer = new IntersectionObserver(entries => {
@@ -47,7 +48,8 @@
       positionSignal(button);
       // Restart the finite signal sequence when switching branches.
       signal.getAnimations({subtree:true}).forEach(animation => { animation.currentTime = 0; });
-      cue.textContent = button.getAttribute('aria-controls') === 'projectsPanel' ? 'Explore projects below ↓' : 'Explore our method below ↓';
+      const labels = {projectsPanel:'Explore projects below ↓',experimentsPanel:'Explore experiments below ↓',methodPanel:'Explore our method below ↓'};
+      cue.textContent = labels[button.getAttribute('aria-controls')];
       cue.setAttribute('aria-controls',activePanel.id);
       observer.observe(activePanel.querySelector('h2'));
       // Bring the opened scene into the middle of the viewport.
@@ -69,7 +71,7 @@
 function restoreIndex(){
  const hash=HermesRoutes.current()?.id||'';
  const target=document.getElementById(hash);
- const panelId=hash==='projectsPanel'?'projectsPanel':(hash==='methodPanel'||target?.closest('#methodPanel')?'methodPanel':null);
+ const panelId=hash==='projectsPanel'?'projectsPanel':hash==='experimentsPanel'?'experimentsPanel':(hash==='methodPanel'||target?.closest('#methodPanel')?'methodPanel':null);
  if(!panelId){
   if(!hash)document.querySelectorAll('.index-trigger[aria-expanded="true"]').forEach(control=>control.click());
   return;

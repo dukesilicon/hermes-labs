@@ -30,7 +30,7 @@ footer{position:relative;left:auto;bottom:auto;padding:0 32px 20px}
 /* The selected homepage has no caption footer; retain its original viewport balance. */
 body:has(.opening-content):not(:has(footer)) main{min-height:100svh}
 
-.index-trigger,.method-step{min-height:44px;min-width:44px}.project-list a{display:inline-flex;align-items:center;min-height:44px}.branch-panel{scroll-margin-top:24px}@media(max-width:420px){.mission-panel{padding:22px}.branch-panel{padding:24px 18px}.index-choices{gap:12px}.method-steps{gap:5px}}
+.index-trigger,.method-step{min-height:44px;min-width:44px}.project-list a{display:inline-flex;align-items:center;min-height:44px}.branch-panel{scroll-margin-top:24px}@media(max-width:420px){.mission-panel{padding:22px}.branch-panel{padding:24px 18px}.index-choices{flex-wrap:wrap;column-gap:12px;row-gap:0}.method-steps{gap:5px}}
 
 /* Directional neural signal: selected branch leads into the revealed content. */
 .research-index{position:relative}

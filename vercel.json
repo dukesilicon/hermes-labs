@@ -256,6 +256,10 @@
       "destination": "/index.html"
     },
     {
+      "source": "/experiments",
+      "destination": "/index.html"
+    },
+    {
       "source": "/method",
       "destination": "/index.html"
     },

@@ -26,7 +26,7 @@
   <main id="main" aria-label="Hermes Labs homepage">
     <div class="opening-content">
     <section class="mission-panel" aria-label="Our mission">
-      <p id="missionText">Hermes Labs is an experimental AI research laboratory studying human cognitive behavior and attempting to reproduce particular cognitive acts in artificial systems. We investigate their observable functions, develop computational accounts, and test whether machines can perform them with measurable fidelity.</p>
+      <p id="missionText">Hermes Labs studies human cognitive capabilities and investigates how they might be reproduced in artificial systems. We turn questions about the mind into computational experiments—testing what a system can do, how it does it, and where our explanations fall short.</p>
     </section>
     <section class="research-index" aria-label="Explore Hermes Labs">
       <nav class="index-choices" aria-label="Research introduction">
@@ -34,14 +34,19 @@
         <button class="index-trigger" aria-expanded="false" aria-controls="experimentsPanel">Our experiments<span aria-hidden="true">＋</span></button>
         <button class="index-trigger" aria-expanded="false" aria-controls="methodPanel">Our method<span aria-hidden="true">＋</span></button>
       </nav>
+<button class="atlas-invitation" type="button" aria-haspopup="dialog" aria-controls="laboratory-atlas">
+ <svg class="atlas-spark" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 20 Q14 14 5 12 M20 20 Q28 10 35 8 M20 20 Q32 23 36 32 M20 20 Q13 27 7 33 M20 20 Q19 12 21 4"/><circle class="spark-tip" style="--dx:15px;--dy:8px" cx="5" cy="12" r="1.5"/><circle class="spark-tip" style="--dx:-15px;--dy:12px" cx="35" cy="8" r="1.5"/><circle class="spark-tip" style="--dx:-16px;--dy:-12px" cx="36" cy="32" r="1.5"/><circle class="spark-tip" style="--dx:13px;--dy:-13px" cx="7" cy="33" r="1.5"/><circle class="spark-tip" style="--dx:-1px;--dy:16px" cx="21" cy="4" r="1.5"/><circle class="spark-pulse" cx="20" cy="20" r="3"/></svg>
+ <span><strong>Explore the lab</strong><small>Open the research map</small></span>
+</button>
+
       <section id="experimentsPanel" class="branch-panel" aria-labelledby="experimentsTitle" hidden>
         <span class="branch-line" aria-hidden="true"></span>
         <div class="panel-heading"><span class="eyebrow">Research in progress</span><h2 id="experimentsTitle">Our experiments</h2></div>
         <div class="project-list">
-          <article><h3><a class="project-page-link" href="/research/fiction/experiments/pilot-pre-test-redesign">Can we distinguish an innovative response from recall? <span aria-hidden="true">↗</span></a></h3><p class="research-stage">EXP-0001 · Proposed</p><p>Investigating how to recognize and assess the construct before testing for a signal.</p></article>
-          <article><h3><a class="project-page-link" href="/research/fiction/experiments/fiction-cwr-exp-0002">Can a model combine what it has been given? <span aria-hidden="true">↗</span></a></h3><p class="research-stage">EXP-0002 · Proposed</p><p>Exploring how existing models combine supplied operations under controlled conditions.</p></article>
-          <article><h3><a class="project-page-link" href="/research/fiction/experiments/fiction-cwr-workflow-exp-0003">How does the way a task is organized affect performance? <span aria-hidden="true">↗</span></a></h3><p class="research-stage">EXP-0003 · Proposed</p><p>Examining whether the organization of a workflow could affect an apparent difference in performance.</p></article>
-          <article><h3><a class="project-page-link" href="/research/fiction/experiments/pt-001/overview">What can outcomes tell us about reformulation? <span aria-hidden="true">↗</span></a></h3><p class="research-stage">PT-001 · Completed offline</p><p>A constructed-strategy diagnostic examining whether outcomes distinguish reformulation from search.</p></article>
+          <article><h3><a class="project-page-link" href="/research/fiction/experiments/pilot-pre-test-redesign">How can we distinguish transformation from reuse? <span aria-hidden="true">↗</span></a></h3><p class="research-stage">EXP-0001 · Proposed</p><p>A proposed human pre-test would first ask whether independent reviewers can assess transformation, including demanding retrieval and superficial novelty as controls.</p></article>
+          <article><h3><a class="project-page-link" href="/research/fiction/experiments/fiction-cwr-exp-0002">Can a model combine what it has been given? <span aria-hidden="true">↗</span></a></h3><p class="research-stage">EXP-0002 · Proposed</p><p>A proposed evaluation would test executable combinations in a finite world. Unequal numbers of source solutions remain a limitation to resolve.</p></article>
+          <article><h3><a class="project-page-link" href="/research/fiction/experiments/fiction-cwr-workflow-exp-0003">How does the way a task is organized affect performance? <span aria-hidden="true">↗</span></a></h3><p class="research-stage">EXP-0003 · Proposed</p><p>A proposed comparison asks whether task organization could explain part of an apparent performance gap.</p></article>
+          <article><h3><a class="project-page-link" href="/research/fiction/experiments/pt-001/overview">What can outcomes tell us about reformulation? <span aria-hidden="true">↗</span></a></h3><p class="research-stage">PT-001 · Completed offline</p><p>In a completed offline diagnostic, a search-only control reproduced the apparent advantage. The result limits what the tested measures can attribute to reformulation.</p></article>
         </div>
         <p class="panel-note">Project Fiction · Proposed studies are not completed runs. PT-001 is an offline diagnostic, not a human or model experiment. <a href="/research/experiment-registry">Explore the experiment registry ↗</a></p>
       </section>
@@ -61,7 +66,7 @@
 <div class="branch-line" aria-hidden="true"></div>
 <nav class="method-nav" aria-label="Within Our Method"><a href="/method/question">Question</a><a href="/method/process">Method</a><a href="/method/in-practice">In practice</a><a href="/method/why-hermes">Why Hermes?</a><a href="/method/possible-minds">Horizon</a></nav>
 <section id="method-proposition" class="method-movement method-opening">
- <span class="eyebrow">A · The scientific proposition</span><h2 id="methodTitle">Can a machine do what the human mind does?</h2>
+ <span class="eyebrow">A · The scientific proposition</span><h2 id="methodTitle">Can a machine reproduce a human cognitive act?</h2>
  <p>Imagine someone steadying a wobbly table with a folded piece of discarded cardboard. Material made for packaging becomes a support, and the person has a workable solution using what is already at hand.</p>
  <p>We can observe the changed use of the material and whether the table becomes stable. What conditions made that response possible, and which features of the act would an artificial system need to preserve?</p>
  <p>A computational account has to make these properties testable. Experiments can vary the materials, constraints, or circumstances and examine whether a candidate system responds appropriately beyond one familiar case.</p>
@@ -69,9 +74,9 @@
 </section>
 <section id="method-ladder" class="method-movement">
  <span class="eyebrow">B · Experimental Cognitive Engineering</span><h2>The Hermes Method</h2>
- <p>We begin by isolating a tractable phenomenon and defining the behavior a computational system would need to reproduce. Candidate implementations are evaluated against those criteria and appropriate comparisons; successes and failures guide revisions to the account. Controlled interventions help test which features of the system explain the observed behavior.</p>
+ <p>We begin with a human cognitive act: something we can observe and ask a precise question about. We define what a computational system would need to do, test it against meaningful comparisons, and change conditions to investigate why it behaves as it does. Each result can send us back to revise the question, the measure, or the explanation.</p>
  <p>Existing human behavioral evidence informs this work, alongside computational cognitive science, cognitive architectures, interpretability, modular learning, artificial life, and computational creativity. <a href="/research/synthetic-cognition-landscape">Prior-art context ↗</a></p>
- <p class="method-caption">Seven stages express an iterative research framework. Findings can return us to a definition, an explanation, or a control. Further recombination, composition, and evolution depend on what reproduction and intervention actually establish.</p>
+ <p class="method-caption">The seven stages are a path through an inquiry, not a checklist of completed achievements. We observe, define, test and intervene; only when evidence allows do we investigate combining capabilities and changing their organization.</p>
  <div class="method-steps" role="group" aria-label="Explore the seven research stages">
  <button type="button" class="method-step" aria-pressed="true" aria-controls="method-stage-1">Isolate</button><button type="button" class="method-step" aria-pressed="false" aria-controls="method-stage-2">Operationalize</button><button type="button" class="method-step" aria-pressed="false" aria-controls="method-stage-3">Reproduce</button><button type="button" class="method-step" aria-pressed="false" aria-controls="method-stage-4">Perturb</button><button type="button" class="method-step" aria-pressed="false" aria-controls="method-stage-5">Recombine</button><button type="button" class="method-step" aria-pressed="false" aria-controls="method-stage-6">Compose</button><button type="button" class="method-step" aria-pressed="false" aria-controls="method-stage-7">Evolve</button>
  </div>
@@ -127,6 +132,15 @@
 
 
 <!-- inquiry:start --><dialog id="collaboration" class="inquiry-dialog" aria-labelledby="inquiry-title" aria-describedby="inquiry-intro"><button class="inquiry-close" type="button" aria-label="Close research inquiry">×</button><h2 id="inquiry-title">Research inquiries</h2><p id="inquiry-intro">A question, an observation, or a possibility for collaboration.</p><form id="inquiry-form"><label for="inquiry-email">Your email</label><input id="inquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"><label for="inquiry-message">Your inquiry</label><textarea id="inquiry-message" name="message" rows="5" minlength="10" maxlength="5000" required placeholder="Tell us what you would like to explore."></textarea><div class="inquiry-trap" aria-hidden="true"><label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div><p class="inquiry-privacy">Your email and message are sent privately to Hermes Labs through Resend so we can respond.</p><button class="inquiry-send" type="submit" disabled>Send inquiry</button><p id="inquiry-status" role="status" aria-live="polite">Checking email availability…</p></form></dialog><!-- inquiry:end -->
+
+<dialog class="atlas-dialog" id="laboratory-atlas" aria-labelledby="atlas-title" aria-describedby="atlas-description">
+ <div class="atlas-shell">
+  <div class="atlas-top"><div><span class="atlas-kicker">Hermes Labs · Research map</span><h2 id="atlas-title">An evolving landscape of inquiry.</h2><p id="atlas-description">Follow a question through our projects, methods and experiments.</p><p class="atlas-hint">Select a topic to read · use + to explore deeper</p></div><button class="atlas-close" type="button" aria-label="Close research map">Close ×</button></div>
+  <div class="atlas-toolbar"><div class="atlas-wayfinding"><nav class="atlas-history" aria-label="Map navigation"><button class="atlas-back" type="button" disabled aria-label="Previous selection">← Back</button><button class="atlas-forward" type="button" disabled aria-label="Next selection">Forward →</button></nav><nav class="atlas-breadcrumb" aria-label="Current position"></nav></div><button class="atlas-reset" type="button">Return to overview</button></div>
+  <div class="atlas-layout"><div class="atlas-map" aria-label="Laboratory research map"><button class="atlas-root" type="button">Hermes Labs<small>What kinds of minds can exist?</small></button><div class="atlas-branches"></div></div><aside class="atlas-detail" aria-live="polite" aria-atomic="true"></aside></div>
+ </div>
+</dialog>
+<link rel="stylesheet" href="/laboratory-map.css"><script src="/laboratory-map.js" defer></script>
 </body>
 </html>
 

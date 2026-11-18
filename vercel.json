@@ -237,6 +237,21 @@
       "source": "/records/shared_literature_synthetic-cognition-landscape.md.html",
       "destination": "/research/synthetic-cognition-landscape",
       "permanent": true
+    },
+    {
+      "source": "/fiction-human-study.html",
+      "destination": "/support/fiction-human-study",
+      "permanent": true
+    },
+    {
+      "source": "/research-support.html",
+      "destination": "/support",
+      "permanent": true
+    },
+    {
+      "source": "/fiction-cwr-support.html",
+      "destination": "/support/fiction-cwr",
+      "permanent": true
     }
   ],
   "headers": [
@@ -654,6 +669,30 @@
     {
       "source": "/research/synthetic-cognition-landscape/section/:section",
       "destination": "/records/shared_literature_synthetic-cognition-landscape.md.html"
+    },
+    {
+      "source": "/support/fiction-human-study",
+      "destination": "/fiction-human-study.html"
+    },
+    {
+      "source": "/support/fiction-human-study/section/:section",
+      "destination": "/fiction-human-study.html"
+    },
+    {
+      "source": "/support",
+      "destination": "/research-support.html"
+    },
+    {
+      "source": "/support/section/:section",
+      "destination": "/research-support.html"
+    },
+    {
+      "source": "/support/fiction-cwr",
+      "destination": "/fiction-cwr-support.html"
+    },
+    {
+      "source": "/support/fiction-cwr/section/:section",
+      "destination": "/fiction-cwr-support.html"
     }
   ]
 }

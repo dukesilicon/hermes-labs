@@ -1,7 +1,35 @@
 {
-  "checkedAt": "2026-10-25T04:01:34.623Z",
-  "staleSnapshots": [],
-  "editorialReviewRequired": [],
+  "checkedAt": "2026-11-18T14:31:19.267Z",
+  "staleSnapshots": [
+    "projects/fiction/README.md",
+    "projects/fiction/research-status.md",
+    "projects/fiction/research-question.md",
+    "projects/fiction/methodology.md",
+    "projects/fiction/hypotheses.md",
+    "projects/fiction/methodology-audit.md",
+    "projects/fiction/construct-validity-direction.md",
+    "projects/fiction/decision-gates.md",
+    "projects/fiction/hypothesis-change-log.md",
+    "experiments/registry.md",
+    "projects/fiction/experiments/pilot-pre-test-redesign.md",
+    "projects/fiction/experiments/fiction-cwr-exp-0002.md",
+    "projects/fiction/evaluations/fiction-cwr-v0.1/README.md"
+  ],
+  "editorialReviewRequired": [
+    "projects/fiction/README.md",
+    "projects/fiction/research-status.md",
+    "projects/fiction/research-question.md",
+    "projects/fiction/methodology.md",
+    "projects/fiction/hypotheses.md",
+    "projects/fiction/methodology-audit.md",
+    "projects/fiction/construct-validity-direction.md",
+    "projects/fiction/decision-gates.md",
+    "projects/fiction/hypothesis-change-log.md",
+    "experiments/registry.md",
+    "projects/fiction/experiments/pilot-pre-test-redesign.md",
+    "projects/fiction/experiments/fiction-cwr-exp-0002.md",
+    "projects/fiction/evaluations/fiction-cwr-v0.1/README.md"
+  ],
   "brokenReferences": [],
-  "externalURLs": "Not checked; local references only."
+  "externalURLs": "Public destination verification recorded separately."
 }

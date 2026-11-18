@@ -15,6 +15,8 @@
   <script src="/network-topology.js" defer></script>
   <script src="/neural-field.js" defer></script>
 
+  <link rel="stylesheet" href="/inquiry.css">
+  <script src="/inquiry.js" defer></script>
 </head>
 <body>
   <a class="skip" href="/support/section/content">Skip to content</a>
@@ -30,6 +32,7 @@
       <h1 id="study-title">Support our research</h1>
       <p class="study-question">How do people turn what they already know into useful new possibilities, and how could we test for that ability in artificial systems?</p>
 
+      <p class="study-introduction">Help Hermes build better ways to test how people and machines turn available information into useful solutions. The proposals tackle two distinct questions: how to design a human task worth piloting, and how to make a future model comparison interpretable.</p>
     </section>
 
 <section class="support-options" aria-label="Research support proposals">
@@ -52,8 +55,10 @@
   <p><strong>Bright · Researcher, Hermes Labs</strong><br>Abuja, Nigeria</p>
   <p>Bright is an independent researcher with a background in health and a self-taught grounding in machine learning and data science. A longstanding curiosity about machines developed into an interest in how minds construct ideas, reason and act. His engagement with language models and philosophy prompted the questions behind Project Fiction. At Hermes Labs, he investigates human cognitive capabilities and how their functions might be reproduced in artificial systems.</p>
 </section>
+  <section class="study-section" id="contribute" aria-labelledby="contribute-title"><div class="study-section-label">Work with Hermes</div><div class="study-section-content"><h2 id="contribute-title">Discuss a research collaboration</h2><p>We welcome conversations about study design, measurement, and independent evaluation. Tell us which project or record you are responding to and what you would like to explore together.</p><button type="button" class="study-action study-action-primary" data-inquiry-open aria-haspopup="dialog" aria-controls="collaboration">Open research inquiry <span aria-hidden="true">↗</span></button></div></section>
   </main>
   <footer class="study-footer">Hermes Labs · <a href="/projects/fiction">Project Fiction</a></footer>
 
+<dialog id="collaboration" class="inquiry-dialog" aria-labelledby="inquiry-title" aria-describedby="inquiry-intro"><button class="inquiry-close" type="button" aria-label="Close research inquiry">×</button><h2 id="inquiry-title">Research inquiries</h2><p id="inquiry-intro">Tell us which research question, method or instrument you would like to discuss, and what you could bring to the work.</p><form id="inquiry-form"><label for="inquiry-email">Your email</label><input id="inquiry-email" name="email" type="email" autocomplete="email" maxlength="254" required placeholder="you@example.com"><label for="inquiry-message">Your inquiry</label><textarea id="inquiry-message" name="message" rows="5" minlength="10" maxlength="5000" required placeholder="Tell us what you would like to explore."></textarea><div class="inquiry-trap" aria-hidden="true"><label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label></div><p class="inquiry-privacy">Your email and message are sent privately to Hermes Labs through Resend so we can respond.</p><button class="inquiry-send" type="submit" disabled>Send inquiry</button><p id="inquiry-status" role="status" aria-live="polite">Checking email availability…</p></form></dialog>
 </body>
 </html>

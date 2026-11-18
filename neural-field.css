@@ -62,3 +62,6 @@ body:has(.opening-content):not(:has(footer)) main{min-height:100svh}
 .home-support-link{display:table;margin:4px auto 0;padding:13px 4px;min-height:44px;color:#425c65;font-size:13px;line-height:18px;text-underline-offset:4px}
 .home-support-link:hover{color:#283d45}
 .home-support-link:focus-visible{outline:2px solid #68858e;outline-offset:3px}
+
+.mission-panel .home-research-lead{font-size:15px;line-height:1.55;margin-bottom:14px;color:#354a52}
+.home-research-trail{display:flex;flex-wrap:wrap;justify-content:center;gap:0 18px}.home-research-trail a{display:inline-flex;align-items:center;min-height:44px;font-size:12px;color:#425c65;text-underline-offset:4px}.home-research-trail a:focus-visible{outline:2px solid #68858e;outline-offset:3px}

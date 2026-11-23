@@ -267,48 +267,52 @@
   ],
   "rewrites": [
     {
+      "source": "/activity",
+      "destination": "/activity.html"
+    },
+    {
       "source": "/projects",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/experiments",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/method",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/method/section/:section",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/projects/section/:section",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/section/:section",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/method/question",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/method/process",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/method/in-practice",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/method/why-hermes",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/method/possible-minds",
-      "destination": "/index.html"
+      "destination": "/research-navigation.html"
     },
     {
       "source": "/projects/fiction",

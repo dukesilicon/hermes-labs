@@ -1,0 +1,40 @@
+:root{--field-paper:#fafbf9;--field-ink:#34474e;--field-muted:#536a73;--field-link:#3c6574;--field-panel:rgba(250,251,249,.88)}
+html[data-theme=dark]{color-scheme:dark;--field-paper:#101b24;--field-ink:#d9e7eb;--field-muted:#acc4ce;--field-link:#a4d6e7;--field-panel:rgba(18,32,43,.93);--paper:#101b24;--ink:#d9e7eb;background:#101b24;color:#d9e7eb}
+body{padding-bottom:80px}
+.reading-wash{background:rgba(250,251,249,.42)!important}
+.prototype .chapter{background:linear-gradient(90deg,transparent,rgba(250,251,249,.78) 8%,rgba(250,251,249,.78) 92%,transparent)}
+.neural-theme{position:fixed;z-index:12;bottom:18px;left:18px;display:flex;align-items:center;gap:8px;min-height:46px;padding:5px 14px 5px 7px;border:1px solid #7d9aa65c;border-radius:28px;background:var(--field-panel);color:var(--field-link);box-shadow:0 4px 20px #132b3910;backdrop-filter:blur(12px);cursor:pointer;font:500 13px "Segoe UI",sans-serif}
+.neural-theme svg{width:32px;height:32px;overflow:visible}.neural-theme path{stroke:currentColor;stroke-width:1;fill:none}.neural-theme circle{fill:var(--field-paper);stroke:currentColor;stroke-width:1.2;transition:fill .3s,transform .3s;transform-origin:20px 20px}
+.neural-theme:hover circle:first-of-type{fill:currentColor;transform:scale(1.12)}.neural-theme[data-active=true] circle:first-of-type{fill:currentColor}.neural-theme:focus-visible{outline:2px solid var(--field-link);outline-offset:5px}
+body:has(dialog[open]) .neural-theme{visibility:hidden}
+html[data-theme=dark] body{background:transparent;color:var(--field-ink)}
+html[data-theme=dark] :is(h1,h2,h3,h4,p,li,dt,dd,th,td,label,summary,strong,.wordmark,.lab-name,.prototype){color:var(--field-ink)!important}
+html[data-theme=dark] :is(a,button,.project-page-link,.index-trigger,.explorer-trigger){color:var(--field-link)!important}
+html[data-theme=dark] :is(.eyebrow,.status,.muted,.fine-print,.project-status,.research-stage,.panel-note,.prototype-note,.record-meta,.atlas-hint,.atlas-kicker,.section-intro,.atlas-invitation small){color:var(--field-muted)!important}
+html[data-theme=dark] :is(.reading-panel,.intro-card,.mission-panel,.branch-panel,.inquiry-dialog,.atlas-dialog,.atlas-detail,.atlas-root,.atlas-node,.method-status,.method-interlude,.record-overview,.table-scroll,pre,code,input,textarea,select,.reading-toolbar,.record-contents){background:var(--field-panel)!important;border-color:#7798a650!important;color:var(--field-ink)!important;box-shadow:none}
+html[data-theme=dark] :is(input,textarea)::placeholder{color:#9bb4bf}
+html[data-theme=dark] :is(th,td){background:transparent!important;border-color:#7798a64d!important}
+html[data-theme=dark] .reading-wash{background:rgba(16,27,36,.35)!important}
+html[data-theme=dark] .paper-grid{opacity:.25}
+html[data-theme=dark] .center-haze{background:radial-gradient(ellipse at 50% 25%,#101b2499,transparent 65%)}
+html[data-theme=dark] .prototype .chapter{background:linear-gradient(90deg,transparent,#101b24d9 8%,#101b24d9 92%,transparent);border-color:#7798a640}
+html[data-theme=dark] :is(.atlas-invitation,.home-skip,.skip,.index-below){background:#172b37!important;color:var(--field-link)!important}
+html[data-theme=dark] :is(.project-list article,.evidence-grid article,.latest-research,.explorer-controls,.explorer-trigger,.support-grid article){border-color:#7798a655}
+html[data-theme=dark] dialog::backdrop{background:#071019a6}
+html[data-theme=dark] :focus-visible{outline-color:#a4d6e7!important}
+@media(max-width:650px){.neural-theme{bottom:12px;left:12px;min-height:44px;font-size:12px}}
+@media(prefers-reduced-motion:reduce){.neural-theme circle{transition:none;transform:none}}
+html[data-theme=dark] :is(footer,figcaption,time,.record-summary,.breadcrumbs,.experiment-detail){color:var(--field-muted)!important}
+html[data-theme=dark] .inquiry-send{background:#234b5c!important;color:#e0f0f5!important}
+.neural-theme.theme-in-header{position:static;box-shadow:none;background:transparent;backdrop-filter:none}
+.home-utility:has(.neural-theme){align-items:center;gap:16px;max-width:calc(100% - 32px)}
+.project-header:has(.neural-theme){flex-wrap:wrap}.project-header .neural-theme{order:3}
+body{padding-bottom:0}
+@media(max-width:650px){.home-utility:has(.neural-theme){right:16px;gap:10px}.neural-theme.theme-in-header{padding:4px 8px 4px 4px;font-size:11px}.neural-theme.theme-in-header svg{width:26px;height:26px}}
+/* The control is a labelled node in the field, rather than a separate pill. */
+.neural-theme,.neural-theme.theme-in-header{border:0;box-shadow:none;background:transparent;backdrop-filter:none}
+.neural-theme svg{width:36px;height:36px}.neural-theme path{stroke-width:.85}
+::view-transition-old(root),::view-transition-new(root){animation:none;mix-blend-mode:normal}
+::view-transition-old(root){z-index:1}::view-transition-new(root){z-index:2}
+::view-transition-group(root){animation-duration:0s}
+@media(prefers-reduced-motion:reduce){::view-transition-group(root),::view-transition-old(root),::view-transition-new(root){animation:none}}

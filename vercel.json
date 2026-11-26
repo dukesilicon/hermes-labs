@@ -266,6 +266,9 @@
     }
   ],
   "rewrites": [
+    {"source":"/research/notes","destination":"/research/notes/index.html"},
+    {"source":"/research/notes/affect-000","destination":"/research/notes/affect-000.html"},
+    {"source":"/research/experiments/affect-000","destination":"/research/notes/experiment.html"},
     {
       "source": "/activity",
       "destination": "/activity.html"

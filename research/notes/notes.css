@@ -3,3 +3,24 @@
 :root[data-theme="dark"]{color-scheme:dark;background:#101b24;color:#d9e7eb;--muted:#acc4ce;--line:#38515d;--link:#a4d6e7}
 .notes-header{align-items:center}
 .notes-header .home-utility{position:static;order:3;margin-left:auto}
+
+/* Keep the shared field visible at the margins of the reading surface. */
+.notes-page{isolation:isolate}
+.notes-page #world{
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  opacity:.52;
+  mask-image:linear-gradient(to right,#000,transparent clamp(18px,12vw,220px),transparent calc(100% - clamp(18px,12vw,220px)),#000);
+}
+
+@media print{
+  .notes-page #world,.notes-header .home-utility,.notes-page .contents{display:none}
+  h1,h2,h3,caption{break-after:avoid}
+  figure,tr{break-inside:avoid}
+  figure img{max-height:65vh;object-fit:contain}
+  .table{overflow:visible}
+}

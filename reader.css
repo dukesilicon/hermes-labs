@@ -3,3 +3,15 @@
 
 /* Support proposal surfaces follow the reader theme. */
 .support-options article{background:#f4f7f6;color:#34474e;border-color:#cbd7d9}html[data-theme=dark] .support-options article{background:#172a35;color:#d9e7eb;border-color:#38515d}
+
+/* Present the proposals as an editorial list with a clear reading order. */
+.study-main .support-options{display:block}
+.study-main .support-options article{
+  display:block;
+  border:0;
+  border-top:1px solid #82969e55;
+  border-radius:0;
+  background:none;
+  padding:22px 0;
+}
+.study-main .support-options article p{max-width:65ch}

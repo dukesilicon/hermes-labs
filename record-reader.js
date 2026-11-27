@@ -38,16 +38,17 @@
     const table=document.createElement('table'),head=document.createElement('thead'),tr=document.createElement('tr'),body=document.createElement('tbody');
     headers.forEach(value=>{const th=document.createElement('th');th.scope='col';th.textContent=value;tr.append(th);});head.append(tr);table.append(head,body);region.append(table);
     const nav=document.createElement('div');nav.className='reader-pagination';
+    const toolbar=document.createElement('div');toolbar.className='table-toolbar';
     const previous=document.createElement('button'),next=document.createElement('button');previous.textContent='Previous rows';next.textContent='Next rows';nav.append(previous,next);
     let page=0;
     function render(){
      const query=input.value.toLowerCase(),filtered=rows.filter(row=>row.join(' ').toLowerCase().includes(query));
      body.replaceChildren();filtered.slice(page*25,page*25+25).forEach(row=>{const tr=document.createElement('tr');row.forEach(value=>{const td=document.createElement('td');td.textContent=value;tr.append(td);});body.append(tr);});
      status.textContent=filtered.length?`Rows ${page*25+1}–${Math.min(page*25+25,filtered.length)} of ${filtered.length} (${rows.length} total).`:'No matching rows.';
-     previous.disabled=page===0;next.disabled=(page+1)*25>=filtered.length;
+     previous.setAttribute("aria-disabled",String(page===0));next.setAttribute("aria-disabled",String((page+1)*25>=filtered.length));
     }
-    input.addEventListener('input',()=>{page=0;render();});previous.addEventListener('click',()=>{page--;render();});next.addEventListener('click',()=>{page++;render();});
-    root.append(label,region,nav);button.remove();render();input.focus();
+    input.addEventListener('input',()=>{page=0;render();});previous.addEventListener('click',()=>{if(previous.getAttribute('aria-disabled')==='true')return;page--;render();region.scrollTop=0;});next.addEventListener('click',()=>{if(next.getAttribute('aria-disabled')==='true')return;page++;render();region.scrollTop=0;});
+    toolbar.append(label,status,nav);root.append(toolbar,region);button.remove();render();input.focus();
    }catch{status.textContent='Unable to load. Retry or use the original CSV download.';button.disabled=false;}
   });
  });

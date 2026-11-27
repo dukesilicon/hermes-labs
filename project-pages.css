@@ -52,3 +52,34 @@ table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.65}th,td{
 @media(max-width:600px){.project-header{gap:12px;padding:12px 20px}.project-header>a:last-child{font-size:13px}.section-nav{gap:4px 18px}.section-nav a{font-size:13px}.reading-panel{padding:24px 18px}.record-link{min-height:48px;flex-wrap:wrap}.record-link small{flex-basis:100%}.record-heading>a{margin-right:12px}.source-document ul,.source-document ol{padding-left:22px}.fact-grid{grid-template-columns:1fr}.fact-grid>div{display:flex;gap:15px;align-items:baseline}.source-document pre{overflow-x:auto;white-space:pre;overflow-wrap:normal}}
 /* A concise reading path above selected, unchanged research records. */
 .experiment-brief{margin-top:28px}.experiment-brief h2{margin-top:8px}.experiment-brief dl{margin:0}.experiment-brief dl>div+div{border-top:1px solid #75858c20}.experiment-brief dl>div{padding:15px 0}.experiment-brief dt{font-size:12px;font-weight:600;color:#536970}.experiment-brief dd{margin:6px 0 0;line-height:1.7;color:#415258}.experiment-brief-note{font-size:12px;line-height:1.6;color:#718187}
+
+/* Keep search, range and page controls beside the strategy table. */
+.table-toolbar{display:flex;align-items:center;gap:12px 18px;flex-wrap:wrap}
+.table-toolbar [role=status]{margin:0;font-variant-numeric:tabular-nums}
+.table-toolbar .reader-pagination{gap:8px;margin-left:auto}
+.reader-pagination button[aria-disabled=true]{opacity:.55;cursor:default}
+.csv-reader .table-scroll{max-height: min(62vh, 38rem);margin-top:12px}
+.csv-reader thead th{position:sticky;top:0;z-index:1}
+@media(max-width:600px){.table-toolbar .reader-pagination{margin-left:0}}
+
+/* Keep headings with the text they introduce in printed records. */
+@media print{
+  #world,.reading-wash,.neural-theme,.record-actions,.record-contents,.record-reading-nav,.table-toolbar{display:none}
+  .reading-panel,.record-provenance{border:0;padding-inline:0;background:transparent}
+  h1,h2,h3,h4,caption{break-after:avoid}
+  tr{break-inside:avoid}
+  .table-scroll,.csv-reader .table-scroll{max-height:none;overflow:visible}
+  .csv-reader thead th{position:static}
+}
+
+/* Scientific prose reads continuously; evidence retains its own framing. */
+main:has(.record-heading) > .reading-panel{
+  border:0;
+  border-top:1px solid #82969e45;
+  border-radius:0;
+  background:none;
+  backdrop-filter:none;
+  padding:clamp(20px,4vw,36px) 0;
+  margin:0;
+}
+main:has(.record-heading) .record-contents summary{font-weight:600}
